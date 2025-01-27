@@ -135,6 +135,7 @@ def process_time_range(starting_df: pd.DataFrame, start_date: datetime, platform
 
             current_time = next_time
         interval_hours = 6
+        start_date = datetime.strptime("2024-01-01", '%Y-%m-%d')
 
 
 def gather_data(platform: Platform) -> None:
