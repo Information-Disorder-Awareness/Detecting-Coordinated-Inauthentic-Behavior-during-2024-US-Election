@@ -156,6 +156,7 @@ def gather_data(platform: Platform) -> None:
         if os.path.exists(f"./datasets/{platform}/dataset.csv"):
             df = pd.read_csv(f"./datasets/{platform}/dataset.csv")
             start_date = df['create_time'].iloc[-1]
+            start_date = datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S')
             last_term = df['label'].iloc[-1]
             terms = terms[terms.index(last_term):]
 
