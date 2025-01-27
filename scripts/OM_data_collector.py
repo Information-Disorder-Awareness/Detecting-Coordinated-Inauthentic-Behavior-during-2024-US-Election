@@ -95,8 +95,8 @@ def standardize_datetime(date_input):
 def process_time_range(starting_df: pd.DataFrame, start_date: datetime, platform: Platform, terms: list,
                        end_date=datetime.strptime("2024-11-30", '%Y-%m-%d'), interval_hours=6, limit=10000) -> None:
     all_posts = starting_df
+    current_time = start_date
     for term in terms:
-        current_time = start_date
         while current_time < end_date:
             next_time = current_time + timedelta(hours=interval_hours)
             if next_time > end_date:
@@ -135,7 +135,7 @@ def process_time_range(starting_df: pd.DataFrame, start_date: datetime, platform
 
             current_time = next_time
         interval_hours = 6
-        start_date = datetime.strptime("2024-01-01", '%Y-%m-%d')
+        current_time = datetime.strptime("2024-01-01", '%Y-%m-%d')
 
 
 def gather_data(platform: Platform) -> None:
