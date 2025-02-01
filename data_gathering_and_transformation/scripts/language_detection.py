@@ -1,3 +1,4 @@
+import os.path
 import re
 import pandas as pd
 from transformers import pipeline
@@ -22,7 +23,10 @@ def detect_lang(text):
 
 
 def detect_language(platform: Platform):
-    df = pd.read_csv(f"./datasets/{platform}/filtered_posts.csv")
+    df = pd.read_csv(f"../datasets/{platform}/filtered_posts.csv")
+
+    if os.path.exists(f"../datasets/{platform}/filtered_posts_cleaned.csv"):
+        print("Language already detected.")
 
     print("Starting text cleaning...")
     df['text'] = df['text'].progress_apply(clean_text)
@@ -31,4 +35,4 @@ def detect_language(platform: Platform):
 
     df['lang'] = df['text'].progress_apply(detect_lang)
 
-    df.to_csv(f"./datasets/{platform}/filtered_posts_cleaned.csv", index=False)
+    df.to_csv(f"../datasets/{platform}/filtered_posts_cleaned.csv", index=False)

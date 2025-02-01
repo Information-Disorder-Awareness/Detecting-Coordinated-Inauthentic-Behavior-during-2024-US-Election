@@ -154,7 +154,7 @@ def process_time_range(starting_df: pd.DataFrame, start_date: datetime, platform
 
             all_posts = pd.concat([all_posts, pd.DataFrame(extracted_data)], ignore_index=True).dropna().drop_duplicates(subset=['create_time', 'text', 'author'])
 
-            all_posts.to_csv(f"./datasets/{platform}/dataset.csv", index=False)
+            all_posts.to_csv(f"../datasets/{platform}/dataset.csv", index=False)
             print(f"Retrieved {len(extracted_data)} elements from {current_time} to {next_time} about {term} on {platform}. Total result until {next_time}: {len(all_posts)}")
 
             current_time = next_time
@@ -172,13 +172,13 @@ def gather_data(platform: Platform) -> None:
     terms = ["Trump", "trumpsupporters", "MAGA", "makeamericagreatagain", "JD Vance", "letsgobrandon", "WWG1WGA", "Harris", "Biden", "voteblue2024", "bidenharris2024", "US Elections", "2024 Elections", "2024 Presidential Elections"]
     df = pd.DataFrame()
 
-    if not os.path.exists(f"./datasets/{platform}"):
+    if not os.path.exists(f"../datasets/{platform}"):
         print(f"Creating /datasets/{platform}")
-        os.makedirs(f"./datasets/{platform}")
+        os.makedirs(f"../datasets/{platform}")
     else:
         print(f"Already exists datasets/{platform}")
-        if os.path.exists(f"./datasets/{platform}/dataset.csv"):
-            df = pd.read_csv(f"./datasets/{platform}/dataset.csv")
+        if os.path.exists(f"../datasets/{platform}/dataset.csv"):
+            df = pd.read_csv(f"../datasets/{platform}/dataset.csv")
             start_date = df['create_time'].iloc[-1]
             start_date = datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S') + timedelta(seconds=1)
             last_term = df['label'].iloc[-1]

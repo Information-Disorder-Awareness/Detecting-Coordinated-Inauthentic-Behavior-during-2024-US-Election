@@ -27,8 +27,8 @@ def replace_substrings(df, replacement_dict: Dict[str, str]):
     return df
 
 def unspool_texts(platform: Platform):
-    df = pd.read_csv(f'./datasets/{platform}/dataset.csv')
-    if os.path.exists(f"./datasets/{platform}/dataset_unspooled.csv"):
+    df = pd.read_csv(f'../datasets/{platform}/dataset.csv')
+    if os.path.exists(f"../datasets/{platform}/dataset_unspooled.csv"):
         print("Dataset already unspooled.")
         return
 
@@ -38,5 +38,5 @@ def unspool_texts(platform: Platform):
     print("Replacing shortened urls in the dataset...")
     df = replace_substrings(df, unspooled['urls'])
 
-    df.to_csv(f'./datasets/{platform}/dataset_unspooled.csv', index=False)
+    df.to_csv(f'../datasets/{platform}/dataset_unspooled.csv', index=False)
     print(f"Correctly saved the unspooled dataset in /datasets/{platform}/dataset_unspooled.csv.")

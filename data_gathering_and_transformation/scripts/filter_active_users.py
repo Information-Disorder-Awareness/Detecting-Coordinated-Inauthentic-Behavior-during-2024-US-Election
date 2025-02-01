@@ -51,14 +51,14 @@ def filter_active_linkers(df: pd.DataFrame, min_unique_links: int = 20) -> pd.Da
 
 def filter_active_users(platform: Platform) -> None:
 
-    if os.path.exists(f'./datasets/{platform}/filtered_posts.csv'):
+    if os.path.exists(f'../datasets/{platform}/filtered_posts.csv'):
         print("Dataset already filtered for active users")
         return
 
-    df = pd.read_csv(f'./datasets/{platform}/dataset_relevant_urls.csv')
+    df = pd.read_csv(f'../datasets/{platform}/dataset_relevant_urls.csv')
 
     print("Starting dataset filtering for active users...")
     filtered_df = filter_active_linkers(df)
 
-    filtered_df.to_csv(f'./datasets/{platform}/filtered_posts.csv', index=False)
+    filtered_df.to_csv(f'../datasets/{platform}/filtered_posts.csv', index=False)
     print(f"Correctly filtered {len(filtered_df)} contents from active users in /datasets/{platform}/filtered_posts.csv")

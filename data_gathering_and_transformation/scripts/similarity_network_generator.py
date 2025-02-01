@@ -38,8 +38,8 @@ class NetworkConfig:
 
 def get_network_paths(platform: Platform) -> NetworkPaths:
     """Create network paths from platform. Pure function with no side effects."""
-    platform_dir = Path(f"./datasets/{platform}")
-    network_dir = Path(f"./networks/{platform}")
+    platform_dir = Path(f"../datasets/{platform}")
+    network_dir = Path(f"../networks/{platform}")
 
     return NetworkPaths(
         input_file=platform_dir / "filtered_posts_cleaned.csv",
