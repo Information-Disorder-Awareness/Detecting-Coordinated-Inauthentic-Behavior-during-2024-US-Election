@@ -23,7 +23,7 @@ def analyze_urls(df: pd.DataFrame) -> Tuple[pd.DataFrame, int]:
 
 
 def process_urls_stats(platform: Platform) -> None:
-    df = pd.read_csv(f"./datasets/{platform}/dataset.csv")
+    df = pd.read_csv(f"./datasets/{platform}/dataset_urls.csv")
 
     if os.path.exists(f"./datasets/{platform}/url_stats.csv"):
         print("Unique URLs already found")
@@ -33,4 +33,4 @@ def process_urls_stats(platform: Platform) -> None:
     url_stats, unique_count = analyze_urls(df)
 
     url_stats.to_csv(f"./datasets/{platform}/url_stats.csv")
-    print(f"Found {unique_count} unique URLs in datasets/{platform}/dataset.csv")
+    print(f"Found {unique_count} unique URLs in datasets/{platform}/url_stats.csv")

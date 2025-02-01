@@ -13,8 +13,6 @@ classificator = pipeline("text-classification", model="ERCDiDip/langdetect", tru
 def clean_text(text):
     text = re.sub(r'\\[ntr]', ' ', text)
 
-    text = re.sub(r'http[s]?://\S+|www\.\S+', '', text)
-
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
@@ -24,7 +22,7 @@ def detect_lang(text):
 
 
 def detect_language(platform: Platform):
-    df = pd.read_csv(f"./datasets/{platform}/significant_texts.csv")
+    df = pd.read_csv(f"./datasets/{platform}/filtered_posts.csv")
 
     print("Starting text cleaning...")
     df['text'] = df['text'].progress_apply(clean_text)
@@ -33,4 +31,4 @@ def detect_language(platform: Platform):
 
     df['lang'] = df['text'].progress_apply(detect_lang)
 
-    df.to_csv(f"./datasets/{platform}/significant_cleaned.csv", index=False)
+    df.to_csv(f"./datasets/{platform}/filtered_posts_cleaned.csv", index=False)
