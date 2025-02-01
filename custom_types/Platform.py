@@ -1,8 +1,8 @@
 from enum import StrEnum
 
 class Platform(StrEnum):
-    _4CHAN = '4chan'
-    _8KUN = '8kun'
+    FOURCHAN = '4chan'
+    EIGHTKUN = '8kun'
     BLUESKY = 'bluesky'
     BITCHUTE = 'bitchute_comment'
     FEDIVERSE = 'fediverse'
@@ -17,9 +17,9 @@ class Platform(StrEnum):
     POAL = 'poal'
     RUMBLE = 'rumble_comment'
     RUTUBE = 'rutube_comment'
-    WIN = 'win'
     TELEGRAM = 'telegram'
     TIKTOK = 'tiktok_comment'
     TRUTH = 'truth_social'
     VK = 'vk'
     WIMKIN = 'wimkin'
+    WIN = 'win'
