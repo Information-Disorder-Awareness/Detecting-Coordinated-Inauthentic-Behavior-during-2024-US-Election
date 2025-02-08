@@ -1,0 +1,80 @@
+{
+  "network_statistics": {
+    "number_of_nodes": 13,
+    "number_of_edges": 70,
+    "average_degree": 10.76923076923077,
+    "density": 0.8974358974358975,
+    "number_of_connected_components": 1
+  },
+  "threshold_parameters": {
+    "similarity_percentile": 94,
+    "centrality_percentile": 98
+  },
+  "authors": {
+    "62": {
+      "name": "CODE RED",
+      "degree": 7,
+      "neighbors": 7
+    },
+    "108": {
+      "name": "Disclose.tv Chat",
+      "degree": 11,
+      "neighbors": 11
+    },
+    "122": {
+      "name": "East Coast News & Discussion",
+      "degree": 12,
+      "neighbors": 12
+    },
+    "249": {
+      "name": "Mid West News & Discussion",
+      "degree": 12,
+      "neighbors": 12
+    },
+    "250": {
+      "name": "Mid-West (Intel MSM won't cover)",
+      "degree": 12,
+      "neighbors": 12
+    },
+    "342": {
+      "name": "Qlobal-Change USA",
+      "degree": 9,
+      "neighbors": 9
+    },
+    "359": {
+      "name": "Rocky Mountain News & Discussion",
+      "degree": 12,
+      "neighbors": 12
+    },
+    "377": {
+      "name": "Southern States (Intel MSM won't cover)",
+      "degree": 12,
+      "neighbors": 12
+    },
+    "405": {
+      "name": "The Library",
+      "degree": 11,
+      "neighbors": 11
+    },
+    "426": {
+      "name": "The_Donald",
+      "degree": 9,
+      "neighbors": 9
+    },
+    "452": {
+      "name": "US Voter Fraud & Coup-Ops Intel 2020 - 2022",
+      "degree": 11,
+      "neighbors": 11
+    },
+    "456": {
+      "name": "Utah Freedom Coalition",
+      "degree": 10,
+      "neighbors": 10
+    },
+    "484": {
+      "name": "West Coast News & Discussion",
+      "degree": 12,
+      "neighbors": 12
+    }
+  }
+}

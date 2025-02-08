@@ -1,0 +1,180 @@
+{
+  "network_statistics": {
+    "number_of_nodes": 33,
+    "number_of_edges": 526,
+    "average_degree": 31.87878787878788,
+    "density": 0.9962121212121212,
+    "number_of_connected_components": 1
+  },
+  "threshold_parameters": {
+    "similarity_percentile": 98,
+    "centrality_percentile": 98
+  },
+  "authors": {
+    "4": {
+      "name": "123RHGreen",
+      "degree": 31,
+      "neighbors": 31
+    },
+    "58": {
+      "name": "AmarilloArmadillo",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "60": {
+      "name": "AmericaWakeUpToTruth",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "100": {
+      "name": "AuH2O",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "126": {
+      "name": "Bcoco",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "155": {
+      "name": "Boomstick",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "265": {
+      "name": "Danco1830",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "286": {
+      "name": "Deedee1487",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "295": {
+      "name": "DeplorableBot1",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "297": {
+      "name": "DeplorableOzy",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "357": {
+      "name": "EricSandy",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "416": {
+      "name": "GaryCCannon",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "471": {
+      "name": "HerbstDW",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "559": {
+      "name": "Jmar1967",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "581": {
+      "name": "Juleskid",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "592": {
+      "name": "K0d1ack",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "727": {
+      "name": "MarciaW",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "748": {
+      "name": "Mdlmurray",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "755": {
+      "name": "Merileedawn",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "791": {
+      "name": "Mxtrning",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "871": {
+      "name": "PatriotQueen213",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "928": {
+      "name": "RJohnL",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1039": {
+      "name": "Seatrumpet",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1097": {
+      "name": "Stuart28",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1130": {
+      "name": "Telosa3",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1304": {
+      "name": "Zanola",
+      "degree": 30,
+      "neighbors": 30
+    },
+    "1339": {
+      "name": "badland66",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1385": {
+      "name": "cavedawg",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1465": {
+      "name": "gatewaypundit",
+      "degree": 31,
+      "neighbors": 31
+    },
+    "1568": {
+      "name": "majo1776maga",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1582": {
+      "name": "mfirebrand2",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1690": {
+      "name": "shortman5427",
+      "degree": 32,
+      "neighbors": 32
+    },
+    "1768": {
+      "name": "wushukid",
+      "degree": 32,
+      "neighbors": 32
+    }
+  }
+}

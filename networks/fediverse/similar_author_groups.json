@@ -1,26 +1,26 @@
 [
   [
+    "cnbc",
+    "cnbc_rss"
+  ],
+  [
     "lolgop",
     "thelolgop"
-  ],
-  [
-    "BBCNews",
-    "BBCWorld"
-  ],
-  [
-    "newsguyusa",
-    "w7voa"
   ],
   [
     "aaron.rupar",
     "atrupar"
   ],
   [
-    "cnbc",
-    "cnbc_rss"
+    "BBCNews",
+    "BBCWorld"
   ],
   [
     "theverge_com",
     "verge"
+  ],
+  [
+    "newsguyusa",
+    "w7voa"
   ]
 ]

@@ -1,0 +1,938 @@
+{
+    "graph_data": {
+        "70": {
+            "70": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.0239561647876407,
+                "similarity_threshold": 0.06
+            }
+        },
+        "72": {
+            "70": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.024837834157883706,
+                "similarity_threshold": 0.06
+            }
+        },
+        "74": {
+            "70": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.02621409308020496,
+                "similarity_threshold": 0.06
+            }
+        },
+        "76": {
+            "70": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.027770196410263195,
+                "similarity_threshold": 0.06
+            }
+        },
+        "78": {
+            "70": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.029019657335838056,
+                "similarity_threshold": 0.06
+            }
+        },
+        "80": {
+            "70": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.03110672290537362,
+                "similarity_threshold": 0.06
+            }
+        },
+        "82": {
+            "70": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.03367331351063763,
+                "similarity_threshold": 0.06
+            }
+        },
+        "84": {
+            "70": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.03535930008203086,
+                "similarity_threshold": 0.06
+            }
+        },
+        "86": {
+            "70": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.03749336674255706,
+                "similarity_threshold": 0.06
+            }
+        },
+        "88": {
+            "70": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.04047831247983395,
+                "similarity_threshold": 0.06
+            }
+        },
+        "90": {
+            "70": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.04607045719880378,
+                "similarity_threshold": 0.06
+            }
+        },
+        "92": {
+            "70": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.049633374614961,
+                "similarity_threshold": 0.06
+            }
+        },
+        "94": {
+            "70": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.05575891036908312,
+                "similarity_threshold": 0.06
+            }
+        },
+        "96": {
+            "70": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.06315490187546335,
+                "similarity_threshold": 0.06
+            }
+        },
+        "98": {
+            "70": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.01
+            },
+            "72": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.01
+            },
+            "74": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.01
+            },
+            "76": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "78": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "80": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "82": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "84": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "86": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "88": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "90": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "92": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.02
+            },
+            "94": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.03
+            },
+            "96": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.03
+            },
+            "98": {
+                "centrality_threshold": 0.08452252042244383,
+                "similarity_threshold": 0.06
+            }
+        }
+    },
+    "optimal_coordinates": {
+        "similarity_percentile": 76,
+        "centrality_percentile": 98
+    }
+}

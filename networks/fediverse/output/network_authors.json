@@ -1,0 +1,135 @@
+{
+  "network_statistics": {
+    "number_of_nodes": 24,
+    "number_of_edges": 207,
+    "average_degree": 17.25,
+    "density": 0.75,
+    "number_of_connected_components": 1
+  },
+  "threshold_parameters": {
+    "similarity_percentile": 76,
+    "centrality_percentile": 98
+  },
+  "authors": {
+    "57": {
+      "name": "Bellison22",
+      "degree": 22,
+      "neighbors": 22
+    },
+    "140": {
+      "name": "Free_Press",
+      "degree": 20,
+      "neighbors": 20
+    },
+    "145": {
+      "name": "GottaLaff",
+      "degree": 22,
+      "neighbors": 22
+    },
+    "212": {
+      "name": "KimPerales",
+      "degree": 20,
+      "neighbors": 20
+    },
+    "222": {
+      "name": "KyleGCrider",
+      "degree": 16,
+      "neighbors": 16
+    },
+    "300": {
+      "name": "Nonilex",
+      "degree": 17,
+      "neighbors": 17
+    },
+    "447": {
+      "name": "WarnerCrocker",
+      "degree": 13,
+      "neighbors": 13
+    },
+    "536": {
+      "name": "black_intellect",
+      "degree": 14,
+      "neighbors": 14
+    },
+    "572": {
+      "name": "cdarwin",
+      "degree": 19,
+      "neighbors": 19
+    },
+    "609": {
+      "name": "dangrsmind",
+      "degree": 19,
+      "neighbors": 19
+    },
+    "623": {
+      "name": "david_weber",
+      "degree": 14,
+      "neighbors": 14
+    },
+    "645": {
+      "name": "dogzilla",
+      "degree": 18,
+      "neighbors": 18
+    },
+    "864": {
+      "name": "knittingknots2",
+      "degree": 18,
+      "neighbors": 18
+    },
+    "968": {
+      "name": "newsguyusa",
+      "degree": 13,
+      "neighbors": 13
+    },
+    "1113": {
+      "name": "servelan",
+      "degree": 20,
+      "neighbors": 20
+    },
+    "1150": {
+      "name": "steveberkowitz",
+      "degree": 18,
+      "neighbors": 18
+    },
+    "1190": {
+      "name": "theguardian_us_news",
+      "degree": 12,
+      "neighbors": 12
+    },
+    "1225": {
+      "name": "tomwellborn3",
+      "degree": 16,
+      "neighbors": 16
+    },
+    "1231": {
+      "name": "toyotabedzrock",
+      "degree": 22,
+      "neighbors": 22
+    },
+    "1235": {
+      "name": "trending",
+      "degree": 17,
+      "neighbors": 17
+    },
+    "1253": {
+      "name": "uspolitics",
+      "degree": 23,
+      "neighbors": 23
+    },
+    "1267": {
+      "name": "w7voa",
+      "degree": 16,
+      "neighbors": 16
+    },
+    "1270": {
+      "name": "warnercrocker",
+      "degree": 10,
+      "neighbors": 10
+    },
+    "1273": {
+      "name": "wdlindsy",
+      "degree": 15,
+      "neighbors": 15
+    }
+  }
+}
