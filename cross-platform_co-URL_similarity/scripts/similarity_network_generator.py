@@ -20,7 +20,7 @@ class NetworkConfig:
     batch_size: int = 10000
     timeframe_days: int = 7
     url_pattern: str = r'https?://[^\s<>"]+|www\.[^\s<>"]+|bit\.ly/[^\s<>"]+|t\.co/[^\s<>"]+|tinyurl\.com/[^\s<>"]+|is\.gd/[^\s<>"]+'
-    platforms: List[str] = (Platform.TELEGRAM, Platform.GAB, Platform.GETTR, Platform.TELEGRAM, Platform.VK)  # Add your platforms here
+    platforms: List[str] = (Platform.FEDIVERSE, Platform.GAB, Platform.GETTR, Platform.TELEGRAM, Platform.VK)  # Add your platforms here
 
 
 def extract_urls(text: str, pattern: str) -> set:
