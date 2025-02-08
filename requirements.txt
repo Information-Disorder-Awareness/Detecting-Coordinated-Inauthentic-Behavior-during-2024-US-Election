@@ -33,3 +33,7 @@ regex>=2023.6.3  # Enhanced regex library often used with transformers
 
 # Optional dependencies that might be required based on context
 torch>=2.0.0  # Required by transformers
+networkx~=3.4.1
+matplotlib~=3.9.2
+unspooler~=1.0.0
+seaborn~=0.13.2

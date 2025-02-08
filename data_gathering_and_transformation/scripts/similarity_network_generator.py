@@ -1,216 +1,153 @@
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Set, Tuple, TypeAlias, NamedTuple
-from functools import partial
 import numpy as np
 import pandas as pd
 from scipy.sparse import csr_matrix, save_npz
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.preprocessing import normalize
-from custom_types.Platform import Platform
 import re
 import json
 from tqdm import tqdm
-
-# Type aliases
-AuthorUrlPair: TypeAlias = Tuple[str, str]
-AuthorIdx: TypeAlias = Dict[str, int]
-UrlIdx: TypeAlias = Dict[str, int]
-SimilarityMatrix: TypeAlias = csr_matrix
-AuthorGroups: TypeAlias = List[List[str]]
-
-
-class NetworkPaths(NamedTuple):
-    """Immutable paths for network analysis."""
-    input_file: Path
-    groups_file: Path
-    matrix_file: Path
-    mappings_file: Path
+from datetime import datetime, timedelta
 
 
 @dataclass(frozen=True)
 class NetworkConfig:
-    """Configuration for similarity network analysis."""
     threshold: float = 0.5
     batch_size: int = 10000
+    timeframe_days: int = 7
     url_pattern: str = r'https?://[^\s<>"]+|www\.[^\s<>"]+|bit\.ly/[^\s<>"]+|t\.co/[^\s<>"]+|tinyurl\.com/[^\s<>"]+|is\.gd/[^\s<>"]+'
 
 
-def get_network_paths(platform: Platform) -> NetworkPaths:
-    """Create network paths from platform. Pure function with no side effects."""
-    platform_dir = Path(f"../datasets/{platform}")
-    network_dir = Path(f"../networks/{platform}")
-
-    return NetworkPaths(
-        input_file=platform_dir / "filtered_posts_cleaned.csv",
-        groups_file=network_dir / "similar_author_groups.json",
-        matrix_file=network_dir / "author_similarity_matrix.npz",
-        mappings_file=network_dir / "author_url_mappings.json"
-    )
-
-
-def ensure_directories(paths: NetworkPaths) -> None:
-    """Ensure required directories exist."""
-    paths.groups_file.parent.mkdir(parents=True, exist_ok=True)
-
-
-def extract_urls(text: str, pattern: str) -> Set[str]:
-    """Extract and normalize URLs from text. Pure function."""
+def extract_urls(text: str, pattern: str) -> set:
     if not isinstance(text, str):
         return set()
-
     urls = re.findall(pattern, text, re.IGNORECASE)
     return {url.lower().rstrip('/.').replace('www.', '') for url in urls}
 
 
-def process_batch(batch: pd.DataFrame, config: NetworkConfig) -> List[AuthorUrlPair]:
-    """Process a batch of data. Pure function."""
-    url_extractor = partial(extract_urls, pattern=config.url_pattern)
-    return [
-        (row['author'], url)
-        for _, row in batch.iterrows()
-        for url in url_extractor(row['text'])
-    ]
-
-
-def process_data(paths: NetworkPaths, config: NetworkConfig) -> List[AuthorUrlPair]:
-    """Process input data. Returns author-URL pairs."""
-    if not paths.input_file.exists():
-        raise FileNotFoundError(f"Required input file not found: {paths.input_file}")
-
-    print(f"Reading data from {paths.input_file}")
-    df = pd.read_csv(paths.input_file)
-    print(f"Loaded {len(df)} posts from dataset")
-
-    pairs: List[AuthorUrlPair] = []
-    total_batches = (len(df) + config.batch_size - 1) // config.batch_size
-
-    for start_idx in tqdm(range(0, len(df), config.batch_size), total=total_batches, desc="Processing posts"):
-        batch = df.iloc[start_idx:start_idx + config.batch_size]
-        pairs.extend(process_batch(batch, config))
-
-    print(f"Extracted {len(pairs)} author-URL pairs")
-    return pairs
-
-
-def create_mappings(pairs: List[AuthorUrlPair]) -> Tuple[AuthorIdx, UrlIdx]:
-    """Create index mappings. Pure function."""
-    unique_authors = sorted({author for author, _ in pairs})
-    unique_urls = sorted({url for _, url in pairs})
-
-    print(f"Found {len(unique_authors)} unique authors and {len(unique_urls)} unique URLs")
-
-    return (
-        {author: idx for idx, author in enumerate(unique_authors)},
-        {url: idx for idx, url in enumerate(unique_urls)}
-    )
-
-
-def build_frequency_matrix(
-        pairs: List[AuthorUrlPair],
-        author_to_idx: AuthorIdx,
-        url_to_idx: UrlIdx
-) -> SimilarityMatrix:
-    """Build frequency matrix. Pure function."""
-    print("Building frequency matrix...")
-
-    rows = np.fromiter((author_to_idx[author] for author, _ in pairs), dtype=np.int32)
-    cols = np.fromiter((url_to_idx[url] for _, url in pairs), dtype=np.int32)
-    data = np.ones(len(pairs), dtype=np.float32)
-
-    matrix = csr_matrix(
-        (data, (rows, cols)),
+def create_frequency_matrix(pairs, author_to_idx, url_to_idx):
+    """Create a frequency matrix from author-URL pairs"""
+    rows = [author_to_idx[author] for author, _ in pairs]
+    cols = [url_to_idx[url] for _, url in pairs]
+    return csr_matrix(
+        (np.ones(len(pairs)), (rows, cols)),
         shape=(len(author_to_idx), len(url_to_idx))
     )
 
-    print(f"Created sparse matrix with shape {matrix.shape}")
-    return matrix
+
+def calculate_similarity_matrix(freq_matrix):
+    """Calculate similarity matrix from frequency matrix"""
+    tfidf_matrix = TfidfTransformer(smooth_idf=True).fit_transform(freq_matrix)
+    normalized = normalize(tfidf_matrix, norm='l2', axis=1)
+    return normalized @ normalized.T
 
 
-def calculate_similarity(matrix: SimilarityMatrix) -> Tuple[SimilarityMatrix, SimilarityMatrix]:
-    """Calculate similarity matrices. Pure function."""
-    print("Calculating TF-IDF transformation...")
-    transformer = TfidfTransformer(smooth_idf=True)
-    tfidf_matrix = transformer.fit_transform(matrix)
+def analyze_url_similarity_network(platform: str) -> None:
+    # Setup paths
+    base_dir = Path("..")
+    input_file = base_dir / "datasets" / platform / "filtered_posts_cleaned.csv"
+    output_dir = base_dir / "networks" / platform
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    print("Computing author similarity matrix...")
-    normalized_matrix = normalize(tfidf_matrix, norm='l2', axis=1)
-    author_similarity = normalized_matrix @ normalized_matrix.T
+    config = NetworkConfig()
 
-    return author_similarity, tfidf_matrix
+    # Read and prepare data
+    print(f"Reading data from {input_file}")
+    df = pd.read_csv(input_file)
 
+    # Verifica delle colonne presenti
+    print(f"Columns in dataset: {df.columns.tolist()}")
 
-def find_similar_authors(
-        similarity_matrix: SimilarityMatrix,
-        author_to_idx: AuthorIdx,
-        threshold: float
-) -> AuthorGroups:
-    """Find similar author groups. Pure function."""
-    print(f"Finding similar authors with threshold {threshold}")
+    # Conversione della colonna temporale
+    df['create_time'] = pd.to_datetime(df['create_time'])
+    print(f"Data range: from {df['create_time'].min()} to {df['create_time'].max()}")
 
-    authors = list(author_to_idx.keys())
-    sim_matrix = similarity_matrix.toarray()
-    similar_indices = (sim_matrix >= threshold).nonzero()
+    # Create global author and URL mappings
+    print("Extracting URL pairs...")
+    all_pairs = [(row['author'], url)
+                 for _, row in tqdm(df.iterrows(), total=len(df))
+                 for url in extract_urls(row['text'], config.url_pattern)]
 
-    similar_authors = {
+    authors = sorted({author for author, _ in all_pairs})
+    urls = sorted({url for _, url in all_pairs})
+    author_to_idx = {author: i for i, author in enumerate(authors)}
+    url_to_idx = {url: i for i, url in enumerate(urls)}
+
+    print(f"Found {len(authors)} unique authors and {len(urls)} unique URLs")
+
+    # Initialize accumulator for similarity matrices
+    accumulated_similarity = np.zeros((len(authors), len(authors)))
+    timeframe_count = 0
+
+    # Process data by timeframes
+    start_date = df['create_time'].min()
+    end_date = df['create_time'].max()
+    current_date = start_date
+
+    print(f"Processing data from {start_date} to {end_date}")
+    with tqdm(total=(end_date - start_date).days) as pbar:
+        while current_date <= end_date:
+            timeframe_end = current_date + timedelta(days=config.timeframe_days)
+
+            # Filter data for current timeframe
+            mask = (df['create_time'] >= current_date) & (df['create_time'] < timeframe_end)
+            timeframe_df = df[mask]
+
+            if not timeframe_df.empty:
+                # Extract pairs for current timeframe
+                timeframe_pairs = [(row['author'], url)
+                                   for _, row in timeframe_df.iterrows()
+                                   for url in extract_urls(row['text'], config.url_pattern)]
+
+                if timeframe_pairs:
+                    # Calculate similarity matrix for current timeframe
+                    freq_matrix = create_frequency_matrix(timeframe_pairs, author_to_idx, url_to_idx)
+                    similarity = calculate_similarity_matrix(freq_matrix)
+
+                    # Accumulate similarity matrix
+                    accumulated_similarity += similarity.toarray()
+                    timeframe_count += 1
+
+            current_date = timeframe_end
+            pbar.update(config.timeframe_days)
+
+    print(f"Processed {timeframe_count} timeframes with activity")
+
+    # Calculate average similarity matrix
+    if timeframe_count > 0:
+        average_similarity = accumulated_similarity / timeframe_count
+    else:
+        average_similarity = accumulated_similarity
+
+    # Find similar authors using average similarity
+    similar_pairs = {
         tuple(sorted([authors[i], authors[j]]))
-        for i, j in tqdm(zip(*similar_indices), desc="Finding similar authors")
-        if i < j  # Process upper triangle only
+        for i, j in zip(*np.where(average_similarity >= config.threshold))
+        if i < j
     }
 
-    return [list(group) for group in similar_authors]
+    print(f"Found {len(similar_pairs)} similar author pairs")
 
+    # Save results
+    print("Saving results...")
+    average_similarity_matrix = csr_matrix(average_similarity)
+    save_npz(str(output_dir / "author_similarity_matrix.npz"), average_similarity_matrix)
 
-def save_results(
-        paths: NetworkPaths,
-        groups: AuthorGroups,
-        similarity: SimilarityMatrix,
-        author_to_idx: AuthorIdx,
-        url_to_idx: UrlIdx
-) -> None:
-    """Save analysis results."""
-    with open(paths.groups_file, 'w') as f:
-        json.dump(groups, f, indent=2)
+    with open(output_dir / "similar_author_groups.json", 'w') as f:
+        json.dump([list(pair) for pair in similar_pairs], f, indent=2)
 
-    save_npz(str(paths.matrix_file), similarity)
-
-    with open(paths.mappings_file, 'w') as f:
+    with open(output_dir / "author_url_mappings.json", 'w') as f:
         json.dump({
             'author_to_idx': author_to_idx,
-            'url_to_idx': url_to_idx
+            'url_to_idx': url_to_idx,
+            'timeframe_count': timeframe_count,
+            'start_date': start_date.isoformat(),
+            'end_date': end_date.isoformat()
         }, f, indent=2)
 
-    print("Successfully saved all results")
-
-
-def analyze_url_similarity_network(platform: Platform) -> None:
-    """Pipeline-compatible main function."""
-    try:
-        paths = get_network_paths(platform)
-        config = NetworkConfig()
-
-        # Early return if analysis is already done
-        if paths.groups_file.exists() and paths.matrix_file.exists():
-            print(f"URL similarity analysis already completed for {platform}")
-            return
-
-        print(f"Starting URL similarity analysis for {platform}...")
-        ensure_directories(paths)
-
-        # Execute analysis pipeline using pure functions
-        pairs = process_data(paths, config)
-        author_to_idx, url_to_idx = create_mappings(pairs)
-        frequency_matrix = build_frequency_matrix(pairs, author_to_idx, url_to_idx)
-        similarity_matrix, _ = calculate_similarity(frequency_matrix)
-        similar_groups = find_similar_authors(similarity_matrix, author_to_idx, config.threshold)
-
-        save_results(paths, similar_groups, similarity_matrix, author_to_idx, url_to_idx)
-        print(f"Analysis completed for {platform}")
-
-    except Exception as e:
-        print(f"Error during similarity network analysis: {str(e)}")
-        raise
+    print("Analysis completed successfully")
 
 
 if __name__ == "__main__":
-    analyze_url_similarity_network(Platform.TELEGRAM)
+    analyze_url_similarity_network("TELEGRAM")

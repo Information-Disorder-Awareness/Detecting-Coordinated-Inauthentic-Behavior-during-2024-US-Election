@@ -15,18 +15,21 @@ class AuthorStats:
     links: list[str]
 
 def normalize_url(url: str) -> str:
-    if url.startswith('www.'):
-        url = 'http://' + url
+    try:
+        if url.startswith('www.'):
+            url = 'http://' + url
 
-    parsed = urlparse(url)
-    normalized_url = f"{parsed.scheme}://{parsed.netloc.replace('www.', '')}"
+        parsed = urlparse(url)
+        normalized_url = f"{parsed.scheme}://{parsed.netloc.replace('www.', '')}"
 
-    if parsed.path and parsed.path != '/':
-        normalized_url += parsed.path.rstrip('/')
-    if parsed.query:
-        normalized_url += f"?{parsed.query}"
+        if parsed.path and parsed.path != '/':
+            normalized_url += parsed.path.rstrip('/')
+        if parsed.query:
+            normalized_url += f"?{parsed.query}"
 
-    return normalized_url
+        return normalized_url
+    except ValueError:
+        return ''  # Return empty string for invalid URLs
 
 def extract_urls(text: str) -> Set[str]:
     url_pattern = re.compile(
@@ -35,7 +38,7 @@ def extract_urls(text: str) -> Set[str]:
     )
 
     urls = url_pattern.findall(str(text).lower())
-    return {normalize_url(url) for url in urls}
+    return {url for url in (normalize_url(url) for url in urls) if url}
 
 def filter_active_linkers(df: pd.DataFrame, min_unique_links: int = 20) -> pd.DataFrame:
     author_links: Dict[str, Set[str]] = defaultdict(set)

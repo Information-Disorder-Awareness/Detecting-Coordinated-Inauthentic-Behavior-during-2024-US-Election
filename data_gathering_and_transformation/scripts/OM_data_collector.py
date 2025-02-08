@@ -4,9 +4,6 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-from pandas import read_csv
-from sympy.physics.units import second
-
 from custom_types.Platform import Platform
 from typing import TypeGuard
 from dotenv import load_dotenv
