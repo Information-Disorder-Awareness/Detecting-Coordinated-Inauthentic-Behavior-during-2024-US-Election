@@ -46,8 +46,8 @@ def create_heatmap(df: pd.DataFrame,
     print("Heatmap created successfully")
 
 
-def calculate_cross_platform_thresholds(percentile_range: tuple = (70, 100),
-                                        step: int = 2):
+def calculate_thresholds(percentile_range: tuple = (70, 100),
+                         step: int = 2):
     """
     Calculate thresholds for cross-platform network analysis.
     """
@@ -210,4 +210,4 @@ def calculate_cross_platform_thresholds(percentile_range: tuple = (70, 100),
 
 
 if __name__ == "__main__":
-    calculate_cross_platform_thresholds()
+    calculate_thresholds()
