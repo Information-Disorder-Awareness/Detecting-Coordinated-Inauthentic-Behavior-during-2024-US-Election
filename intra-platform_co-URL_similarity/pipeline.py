@@ -10,20 +10,24 @@ from scripts.text_cleaner import clean_dataset
 from scripts.similarity_network_generator import analyze_url_similarity_network
 from scripts.threshold_calculator import calculate_thresholds
 from scripts.network_visualizer import create_network_visualization
+from scripts.coordinators_domain_analysis import get_coordinators_domains
+from scripts.plot_domains import plot_domain_counts
 
 
 def main(platform: Platform) -> None:
-    gather_data(platform)
-    unspool_texts(platform)
-    process_urls(platform)
-    process_urls_stats(platform)
-    filter_relevant_urls(platform)
-    filter_active_users(platform)
-    clean_dataset(platform)
-    analyze_url_similarity_network(platform)
-    calculate_thresholds(platform)
-    create_network_visualization(platform)
+    #gather_data(platform)
+    #unspool_texts(platform)
+    #process_urls(platform)
+    #process_urls_stats(platform)
+    #filter_relevant_urls(platform)
+    #filter_active_users(platform)
+    #clean_dataset(platform)
+    #analyze_url_similarity_network(platform)
+    #calculate_thresholds(platform)
+    #create_network_visualization(platform)
+    #get_coordinators_domains(platform)
+    plot_domain_counts(platform)
 
 
 if __name__ == '__main__':
-    main(Platform.FEDIVERSE)
+    main(Platform.VK)
