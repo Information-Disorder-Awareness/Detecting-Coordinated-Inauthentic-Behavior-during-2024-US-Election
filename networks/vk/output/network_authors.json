@@ -1,65 +1,130 @@
 {
   "network_statistics": {
-    "number_of_nodes": 10,
-    "number_of_edges": 40,
-    "average_degree": 8.0,
-    "density": 0.8888888888888888,
+    "number_of_nodes": 23,
+    "number_of_edges": 186,
+    "average_degree": 16.17391304347826,
+    "density": 0.7351778656126482,
     "number_of_connected_components": 1
   },
   "threshold_parameters": {
-    "similarity_percentile": 92,
-    "centrality_percentile": 98
+    "similarity_percentile": 80,
+    "centrality_percentile": 95
   },
   "authors": {
+    "58": {
+      "name": "Marius Pelissier",
+      "degree": 9,
+      "neighbors": 9
+    },
     "90": {
       "name": "alegio.oracle",
-      "degree": 8,
-      "neighbors": 8
+      "degree": 19,
+      "neighbors": 19
+    },
+    "98": {
+      "name": "anna51100",
+      "degree": 18,
+      "neighbors": 18
+    },
+    "175": {
+      "name": "denies47",
+      "degree": 14,
+      "neighbors": 14
+    },
+    "181": {
+      "name": "eddy06",
+      "degree": 10,
+      "neighbors": 10
+    },
+    "268": {
+      "name": "id527173656",
+      "degree": 11,
+      "neighbors": 11
+    },
+    "273": {
+      "name": "id531511617",
+      "degree": 18,
+      "neighbors": 18
     },
     "275": {
       "name": "id535504138",
-      "degree": 9,
-      "neighbors": 9
+      "degree": 20,
+      "neighbors": 20
     },
     "310": {
       "name": "id619329502",
-      "degree": 9,
-      "neighbors": 9
+      "degree": 20,
+      "neighbors": 20
     },
     "325": {
       "name": "id629363887",
-      "degree": 9,
-      "neighbors": 9
+      "degree": 22,
+      "neighbors": 22
+    },
+    "335": {
+      "name": "id633912053",
+      "degree": 14,
+      "neighbors": 14
     },
     "339": {
       "name": "id635774495",
-      "degree": 5,
-      "neighbors": 5
+      "degree": 21,
+      "neighbors": 21
     },
     "348": {
       "name": "id651503220",
-      "degree": 7,
-      "neighbors": 7
+      "degree": 18,
+      "neighbors": 18
+    },
+    "369": {
+      "name": "id683661785",
+      "degree": 14,
+      "neighbors": 14
     },
     "376": {
       "name": "id704407752",
-      "degree": 8,
-      "neighbors": 8
+      "degree": 18,
+      "neighbors": 18
+    },
+    "382": {
+      "name": "id712495272",
+      "degree": 7,
+      "neighbors": 7
+    },
+    "407": {
+      "name": "id827801342",
+      "degree": 14,
+      "neighbors": 14
+    },
+    "413": {
+      "name": "id875980026",
+      "degree": 14,
+      "neighbors": 14
     },
     "429": {
       "name": "jdepablo",
-      "degree": 9,
-      "neighbors": 9
+      "degree": 21,
+      "neighbors": 21
+    },
+    "434": {
+      "name": "jp1957",
+      "degree": 14,
+      "neighbors": 14
     },
     "446": {
       "name": "kyra2020",
-      "degree": 9,
-      "neighbors": 9
+      "degree": 20,
+      "neighbors": 20
     },
     "495": {
       "name": "noemie48",
-      "degree": 7,
-      "neighbors": 7
+      "degree": 19,
+      "neighbors": 19
+    },
+    "517": {
+      "name": "pons54",
+      "degree": 17,
+      "neighbors": 17
     }
   }
 }

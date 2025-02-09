@@ -1,0 +1,32 @@
+[
+  {
+    "author1": "Owen Shroyer \ud83c\uddfa\ud83c\uddf8",
+    "author2": "WarRoomShow",
+    "platform1": "telegram",
+    "platform2": "gab"
+  },
+  {
+    "author1": "INFOWARS.COM \ud83d\udeab\ud83d\udeab\ud83d\udeab",
+    "author2": "RealAlexJones",
+    "platform1": "telegram",
+    "platform2": "gab"
+  },
+  {
+    "author1": "INFOWARS.COM \ud83d\udeab\ud83d\udeab\ud83d\udeab",
+    "author2": "TheAlexJonesChannel",
+    "platform1": "telegram",
+    "platform2": "fediverse"
+  },
+  {
+    "author1": "RealAlexJones",
+    "author2": "TheAlexJonesChannel",
+    "platform1": "gab",
+    "platform2": "fediverse"
+  },
+  {
+    "author1": "INFOWARS.COM \ud83d\udeab\ud83d\udeab\ud83d\udeab",
+    "author2": "WarRoomShow",
+    "platform1": "telegram",
+    "platform2": "gab"
+  }
+]
