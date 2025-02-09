@@ -37,6 +37,7 @@ def get_platform_colors() -> Dict[str, str]:
         'gab': '#00FF00',  # Gab green
         'vk': '#FFFF00',  # VK yellow
         'fediverse': '#0000FF',  # Fediverse blue
+        'minds': '#00FFFF', # Minds cyan
         'unknown': '#000000'  # Unknown black
     }
 
@@ -71,15 +72,77 @@ def visualize_cross_platform_network(G: nx.Graph,
                                      author_platforms: dict,
                                      output_file: str,
                                      title: str):
-    """Create and save the network visualization."""
+    """Create and save the network visualization with detailed centrality logging."""
     logging.info("\n=== Creating Network Visualization ===")
     logging.info(f"Network size: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
+    # Calculate eigenvector centrality on the filtered graph
+    logging.info("\nCalculating eigenvector centrality on filtered graph...")
+    try:
+        centrality = nx.eigenvector_centrality(G, max_iter=1000, weight='weight')
+
+        # Create a list of nodes with their properties for sorting and logging
+        node_info = []
+        for node in G.nodes():
+            degree = G.degree(node)
+            weighted_degree = sum(G[node][n]['weight'] for n in G.neighbors(node))
+            author_name = clean_label(author_labels.get(node, f"Unknown-{node}"))
+            platform = author_platforms.get(author_labels.get(node, ''), 'Unknown')
+
+            node_info.append({
+                'node': node,
+                'centrality': centrality[node],
+                'degree': degree,
+                'weighted_degree': weighted_degree,
+                'author': author_name,
+                'platform': platform
+            })
+
+        # Sort nodes by centrality value
+        sorted_nodes = sorted(node_info, key=lambda x: x['centrality'], reverse=True)
+
+        # Log all nodes with their centrality values and other properties
+        logging.info("\nEigenvector Centrality Values for All Nodes (sorted by centrality):")
+        logging.info("\nFormat: NodeID: Centrality | Degree | Weighted Degree | Platform | Author")
+        logging.info("-" * 80)
+
+        for idx, info in enumerate(sorted_nodes, 1):
+            logging.info(
+                f"{idx}. Node {info['node']}: {info['centrality']:.6f} | "
+                f"Degree: {info['degree']} | "
+                f"Weighted Degree: {info['weighted_degree']:.4f} | "
+                f"Platform: {info['platform']} | "
+                f"Author: {info['author']}"
+            )
+
+        logging.info("-" * 80)
+
+        # Calculate and log some statistics
+        centrality_values = [info['centrality'] for info in sorted_nodes]
+        mean_centrality = np.mean(centrality_values)
+        median_centrality = np.median(centrality_values)
+        std_centrality = np.std(centrality_values)
+
+        logging.info("\nCentrality Statistics:")
+        logging.info(f"Mean Centrality: {mean_centrality:.6f}")
+        logging.info(f"Median Centrality: {median_centrality:.6f}")
+        logging.info(f"Standard Deviation: {std_centrality:.6f}")
+        logging.info(f"Maximum Centrality: {max(centrality_values):.6f}")
+        logging.info(f"Minimum Centrality: {min(centrality_values):.6f}")
+
+    except (nx.PowerIterationFailedConvergence, ValueError) as e:
+        logging.error(f"Error calculating eigenvector centrality: {str(e)}")
+        return
+
+    # Get top nodes by this new centrality calculation
+    top_nodes = sorted(centrality.items(), key=lambda x: x[1], reverse=True)[:5]
+    top_node_ids = [node for node, _ in top_nodes]
+
+    # Create figure
     plt.figure(figsize=(20, 20))
     plt.rcParams['font.family'] = ['Arial', 'sans-serif']
 
-    # Get position layout
-    logging.info("Calculating network layout...")
+    # Calculate layout
     pos = nx.spring_layout(
         G,
         k=1.5 / np.sqrt(G.number_of_nodes()),
@@ -90,7 +153,6 @@ def visualize_cross_platform_network(G: nx.Graph,
 
     # Set up platform colors
     platform_colors = get_platform_colors()
-    logging.info("Processing node colors and platform statistics...")
 
     # Create node colors list based on platforms
     node_colors = []
@@ -99,19 +161,10 @@ def visualize_cross_platform_network(G: nx.Graph,
         platform = author_platforms.get(author_labels.get(node, ''), '').lower()
         if not platform:
             platform = 'unknown'
-
-        # Count platforms for statistics
         platform_counts[platform] = platform_counts.get(platform, 0) + 1
-
-        # Add color
         node_colors.append(platform_colors.get(platform, platform_colors['unknown']))
 
-    logging.info("\nPlatform distribution in the network:")
-    for platform, count in sorted(platform_counts.items()):
-        logging.info(f"{platform}: {count} nodes")
-
-    # Draw edges with width based on weight
-    logging.info("Drawing network edges...")
+    # Draw edges
     edges = G.edges()
     edge_weights = [G[u][v]['weight'] for (u, v) in edges]
 
@@ -120,75 +173,79 @@ def visualize_cross_platform_network(G: nx.Graph,
         min_weight = min(edge_weights)
         edge_widths = [1 + 3 * (w - min_weight) / (max_weight - min_weight)
                        for w in edge_weights]
-        logging.info(f"Edge weight range: [{min_weight:.4f}, {max_weight:.4f}]")
     else:
         edge_widths = [1]
-        logging.warning("No edge weights found")
 
-    # Draw nodes
-    logging.info("Drawing network nodes...")
-    node_sizes = [d * 10 for (node, d) in G.degree()]
+    # Draw the base network
+    node_sizes = [centrality[node] * 5000 for node in G.nodes()]
     nx.draw_networkx_nodes(G, pos,
                            node_size=node_sizes,
                            node_color=node_colors,
                            alpha=0.7)
 
-    # Draw edges
     nx.draw_networkx_edges(G, pos,
                            width=edge_widths,
                            edge_color='gray',
                            alpha=0.3)
 
-    # Add labels only for top 5 nodes by degree
-    logging.info("Adding labels for top 5 most influential nodes...")
-
-    # Get top 5 nodes by degree
-    node_degrees = dict(G.degree())
-    top_nodes = sorted(node_degrees.items(), key=lambda x: x[1], reverse=True)[:5]
-    top_node_ids = [node for node, degree in top_nodes]
-
-    logging.info("Top 5 nodes by degree:")
-    for node, degree in top_nodes:
-        author_name = clean_label(author_labels.get(node, str(node)))
-        platform = author_platforms.get(author_labels.get(node, ''), 'Unknown')
-        logging.info(f"Node: {author_name} ({platform}), Degree: {degree}")
-
-    # Create labels only for top nodes
-    labels = {
-        node: f"{clean_label(author_labels.get(node, str(node)))}\n({author_platforms.get(author_labels.get(node, ''), 'Unknown')})"
-        for node in top_node_ids
-    }
-
-    # Adjust label positions
-    pos_attrs = {}
-    for node, coords in pos.items():
-        if node in top_node_ids:  # Only position labels for top nodes
-            pos_attrs[node] = (coords[0], coords[1])
+    # Create labels for top nodes
+    labels = {node: str(node) for node in top_node_ids}
 
     # Draw labels
-    nx.draw_networkx_labels(G, pos_attrs, labels,
+    nx.draw_networkx_labels(G, pos, labels,
                             font_size=8,
                             font_weight='bold',
                             bbox=dict(facecolor='white',
-                                      alpha=0.8))
+                                      edgecolor='gray',
+                                      alpha=0.8,
+                                      pad=4))
 
-    # Add legend
-    logging.info("Adding legend...")
+    # Create legends
     unique_platforms = set(platform_counts.keys())
-    legend_elements = [plt.Line2D([0], [0], marker='o', color='w',
-                                  markerfacecolor=platform_colors.get(p.lower(), platform_colors['unknown']),
-                                  markersize=10, label=p.upper())
-                       for p in sorted(unique_platforms)]
-    plt.legend(handles=legend_elements, loc='upper left', bbox_to_anchor=(1, 1))
+    platform_legend_elements = [plt.Line2D([0], [0], marker='o', color='w',
+                                           markerfacecolor=platform_colors.get(p.lower(), platform_colors['unknown']),
+                                           markersize=10, label=p.upper())
+                                for p in sorted(unique_platforms)]
 
-    plt.title(title)
+    # Create mapping text for top nodes
+    mapping_text = "Top 5 Nodes by Eigenvector Centrality:\n\n"
+    for node, cent_value in top_nodes:
+        author_name = clean_label(author_labels.get(node, f"Unknown-{node}"))
+        platform = author_platforms.get(author_labels.get(node, ''), 'Unknown')
+        degree = G.degree(node)
+        weighted_degree = sum(G[node][n]['weight'] for n in G.neighbors(node))
+
+        mapping_text += f"{node}: {author_name}\n"
+        mapping_text += f"Platform: {platform}\n"
+        mapping_text += f"Centrality: {cent_value:.4f}\n"
+        mapping_text += f"Degree: {degree}\n"
+        mapping_text += f"Weighted Degree: {weighted_degree:.4f}\n\n"
+
+    # Add legends to plot
+    plt.legend(handles=platform_legend_elements,
+               loc='upper left',
+               title="Platforms",
+               bbox_to_anchor=(0.02, 0.98))
+
+    plt.text(0.98, 0.98, mapping_text,
+             transform=plt.gca().transAxes,
+             verticalalignment='top',
+             horizontalalignment='right',
+             fontsize=10,
+             fontfamily='monospace',
+             bbox=dict(facecolor='white',
+                       edgecolor='gray',
+                       alpha=0.8,
+                       pad=10))
+
+    plt.title(title, pad=20)
     plt.axis('off')
     plt.tight_layout()
 
-    logging.info(f"Saving visualization to {output_file}")
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
     logging.info("Visualization completed successfully")
+
 
 
 def save_network_info(G: nx.Graph,

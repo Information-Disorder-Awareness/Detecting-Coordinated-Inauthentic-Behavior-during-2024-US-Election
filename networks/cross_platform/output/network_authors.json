@@ -1,9 +1,9 @@
 {
   "network_statistics": {
-    "number_of_nodes": 139,
-    "number_of_edges": 1585,
-    "average_degree": 22.805755395683452,
-    "density": 0.16525909707016995,
+    "number_of_nodes": 159,
+    "number_of_edges": 3594,
+    "average_degree": 45.20754716981132,
+    "density": 0.2861237162646286,
     "number_of_connected_components": 1
   },
   "threshold_parameters": {
@@ -14,832 +14,952 @@
     "10": {
       "name": "123RHGreen",
       "platform": "gab",
-      "degree": 26,
-      "neighbors": 26
+      "degree": 42,
+      "neighbors": 42
     },
     "12": {
       "name": "1Americanmade",
       "platform": "gab",
-      "degree": 9,
-      "neighbors": 9
+      "degree": 15,
+      "neighbors": 15
     },
-    "92": {
+    "94": {
       "name": "Alex Jones",
       "platform": "vk",
-      "degree": 11,
-      "neighbors": 11
+      "degree": 12,
+      "neighbors": 12
     },
-    "93": {
+    "95": {
       "name": "AlexRKnightIII",
       "platform": "gab",
-      "degree": 2,
-      "neighbors": 2
-    },
-    "108": {
-      "name": "AmarilloArmadillo",
-      "platform": "gab",
-      "degree": 23,
-      "neighbors": 23
-    },
-    "114": {
-      "name": "America First Precinct Project Chat",
-      "platform": "telegram",
-      "degree": 54,
-      "neighbors": 54
-    },
-    "115": {
-      "name": "America's Audit Force",
-      "platform": "telegram",
-      "degree": 54,
-      "neighbors": 54
-    },
-    "117": {
-      "name": "AmericaWakeUpToTruth",
-      "platform": "gab",
-      "degree": 24,
-      "neighbors": 24
-    },
-    "120": {
-      "name": "AmericanHope",
-      "platform": "gab",
-      "degree": 19,
-      "neighbors": 19
-    },
-    "169": {
-      "name": "Arkansas Groyper",
-      "platform": "telegram",
       "degree": 3,
       "neighbors": 3
     },
-    "186": {
+    "110": {
+      "name": "AmarilloArmadillo",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "116": {
+      "name": "America First Precinct Project Chat",
+      "platform": "telegram",
+      "degree": 84,
+      "neighbors": 84
+    },
+    "117": {
+      "name": "America's Audit Force",
+      "platform": "telegram",
+      "degree": 91,
+      "neighbors": 91
+    },
+    "119": {
+      "name": "AmericaWakeUpToTruth",
+      "platform": "gab",
+      "degree": 42,
+      "neighbors": 42
+    },
+    "122": {
+      "name": "AmericanHope",
+      "platform": "gab",
+      "degree": 37,
+      "neighbors": 37
+    },
+    "175": {
+      "name": "Arkansas Groyper",
+      "platform": "telegram",
+      "degree": 2,
+      "neighbors": 2
+    },
+    "192": {
       "name": "Athena_Luther",
       "platform": "gab",
-      "degree": 21,
-      "neighbors": 21
+      "degree": 39,
+      "neighbors": 39
     },
-    "187": {
+    "193": {
       "name": "Atl13tm",
-      "platform": "gab",
-      "degree": 4,
-      "neighbors": 4
-    },
-    "189": {
-      "name": "AuH2O",
-      "platform": "gab",
-      "degree": 22,
-      "neighbors": 22
-    },
-    "200": {
-      "name": "Avsol",
-      "platform": "gab",
-      "degree": 2,
-      "neighbors": 2
-    },
-    "224": {
-      "name": "BackAtTheRanch",
-      "platform": "gab",
-      "degree": 28,
-      "neighbors": 28
-    },
-    "243": {
-      "name": "Bcoco",
-      "platform": "gab",
-      "degree": 22,
-      "neighbors": 22
-    },
-    "254": {
-      "name": "BelladonnaSue",
-      "platform": "gab",
-      "degree": 18,
-      "neighbors": 18
-    },
-    "269": {
-      "name": "Billgo",
-      "platform": "gab",
-      "degree": 7,
-      "neighbors": 7
-    },
-    "294": {
-      "name": "Boomstick",
-      "platform": "gab",
-      "degree": 27,
-      "neighbors": 27
-    },
-    "364": {
-      "name": "Carolina1974",
-      "platform": "gab",
-      "degree": 10,
-      "neighbors": 10
-    },
-    "386": {
-      "name": "Charleton",
-      "platform": "gab",
-      "degree": 12,
-      "neighbors": 12
-    },
-    "474": {
-      "name": "Dailydispatch",
-      "platform": "gab",
-      "degree": 2,
-      "neighbors": 2
-    },
-    "479": {
-      "name": "Danco1830",
-      "platform": "gab",
-      "degree": 26,
-      "neighbors": 26
-    },
-    "511": {
-      "name": "DebbyShultz",
-      "platform": "gab",
-      "degree": 26,
-      "neighbors": 26
-    },
-    "514": {
-      "name": "Deedee1487",
-      "platform": "gab",
-      "degree": 23,
-      "neighbors": 23
-    },
-    "529": {
-      "name": "DeplorableBot1",
-      "platform": "gab",
-      "degree": 25,
-      "neighbors": 25
-    },
-    "531": {
-      "name": "DeplorableOzy",
-      "platform": "gab",
-      "degree": 24,
-      "neighbors": 24
-    },
-    "566": {
-      "name": "DoctorQ's Boom Box!",
-      "platform": "telegram",
-      "degree": 64,
-      "neighbors": 64
-    },
-    "581": {
-      "name": "Doomsday Preppers and Survivalist.",
-      "platform": "telegram",
-      "degree": 73,
-      "neighbors": 73
-    },
-    "611": {
-      "name": "Echobravo",
-      "platform": "gab",
-      "degree": 12,
-      "neighbors": 12
-    },
-    "613": {
-      "name": "EdBjorkvist",
-      "platform": "gab",
-      "degree": 13,
-      "neighbors": 13
-    },
-    "684": {
-      "name": "Fighting 4 AZ",
-      "platform": "telegram",
-      "degree": 48,
-      "neighbors": 48
-    },
-    "759": {
-      "name": "Gateway Pundit",
-      "platform": "telegram",
-      "degree": 68,
-      "neighbors": 68
-    },
-    "763": {
-      "name": "General Fully Exposed",
-      "platform": "telegram",
-      "degree": 10,
-      "neighbors": 10
-    },
-    "814": {
-      "name": "GrizzledOldNamVet",
-      "platform": "gab",
-      "degree": 5,
-      "neighbors": 5
-    },
-    "831": {
-      "name": "H.O.T. Wisconsin-Honest-Open-Transparent",
-      "platform": "telegram",
-      "degree": 28,
-      "neighbors": 28
-    },
-    "851": {
-      "name": "HerbstDW",
-      "platform": "gab",
-      "degree": 30,
-      "neighbors": 30
-    },
-    "875": {
-      "name": "INFOWARS",
-      "platform": "gab",
-      "degree": 8,
-      "neighbors": 8
-    },
-    "876": {
-      "name": "INFOWARS.COM",
-      "platform": "telegram",
-      "degree": 30,
-      "neighbors": 30
-    },
-    "899": {
-      "name": "Infowars",
-      "platform": "fediverse",
-      "degree": 19,
-      "neighbors": 19
-    },
-    "953": {
-      "name": "Jasontroy",
-      "platform": "gab",
-      "degree": 15,
-      "neighbors": 15
-    },
-    "988": {
-      "name": "JoCo Integrity Intercept, Eyes on the Truth",
-      "platform": "telegram",
-      "degree": 65,
-      "neighbors": 65
-    },
-    "1000": {
-      "name": "JohnBouchell",
-      "platform": "gab",
-      "degree": 24,
-      "neighbors": 24
-    },
-    "1060": {
-      "name": "Kallou22",
-      "platform": "gab",
-      "degree": 22,
-      "neighbors": 22
-    },
-    "1068": {
-      "name": "Kashagirl",
-      "platform": "gab",
-      "degree": 19,
-      "neighbors": 19
-    },
-    "1124": {
-      "name": "KyGal53",
-      "platform": "gab",
-      "degree": 15,
-      "neighbors": 15
-    },
-    "1144": {
-      "name": "LadyLiberty1966",
-      "platform": "gab",
-      "degree": 8,
-      "neighbors": 8
-    },
-    "1181": {
-      "name": "Light05",
-      "platform": "gab",
-      "degree": 5,
-      "neighbors": 5
-    },
-    "1254": {
-      "name": "Mackbollen",
-      "platform": "gab",
-      "degree": 15,
-      "neighbors": 15
-    },
-    "1269": {
-      "name": "MarciaW",
-      "platform": "gab",
-      "degree": 26,
-      "neighbors": 26
-    },
-    "1296": {
-      "name": "Matrixxx Grooove Show",
-      "platform": "telegram",
-      "degree": 51,
-      "neighbors": 51
-    },
-    "1326": {
-      "name": "Merileedawn",
-      "platform": "gab",
-      "degree": 24,
-      "neighbors": 24
-    },
-    "1334": {
-      "name": "Midnight Rider Channel",
-      "platform": "telegram",
-      "degree": 42,
-      "neighbors": 42
-    },
-    "1354": {
-      "name": "Minnesota First Audit Chat",
-      "platform": "telegram",
-      "degree": 55,
-      "neighbors": 55
-    },
-    "1401": {
-      "name": "My48",
-      "platform": "gab",
-      "degree": 25,
-      "neighbors": 25
-    },
-    "1410": {
-      "name": "NELSON PEOPLE AWAKE",
-      "platform": "telegram",
-      "degree": 42,
-      "neighbors": 42
-    },
-    "1417": {
-      "name": "NRR78192",
-      "platform": "gab",
-      "degree": 1,
-      "neighbors": 1
-    },
-    "1432": {
-      "name": "Nataliya",
-      "platform": "gab",
-      "degree": 1,
-      "neighbors": 1
-    },
-    "1448": {
-      "name": "New Mexico Audit Force",
-      "platform": "telegram",
-      "degree": 54,
-      "neighbors": 54
-    },
-    "1519": {
-      "name": "Owen Shroyer",
-      "platform": "telegram",
-      "degree": 25,
-      "neighbors": 25
-    },
-    "1529": {
-      "name": "PATRIOTS For AMERICA",
-      "platform": "telegram",
-      "degree": 49,
-      "neighbors": 49
-    },
-    "1554": {
-      "name": "Patriot Army",
-      "platform": "telegram",
-      "degree": 66,
-      "neighbors": 66
-    },
-    "1555": {
-      "name": "Patriot Force California Channel",
-      "platform": "telegram",
-      "degree": 43,
-      "neighbors": 43
-    },
-    "1572": {
-      "name": "PatrioticLady20",
-      "platform": "gab",
-      "degree": 15,
-      "neighbors": 15
-    },
-    "1579": {
-      "name": "Patton6966",
-      "platform": "telegram",
-      "degree": 60,
-      "neighbors": 60
-    },
-    "1668": {
-      "name": "Qlobal-Change USA",
-      "platform": "telegram",
-      "degree": 7,
-      "neighbors": 7
-    },
-    "1670": {
-      "name": "Qrash the matrix",
-      "platform": "telegram",
-      "degree": 64,
-      "neighbors": 64
-    },
-    "1684": {
-      "name": "RJohnL",
-      "platform": "gab",
-      "degree": 25,
-      "neighbors": 25
-    },
-    "1705": {
-      "name": "RandyCFord",
-      "platform": "gab",
-      "degree": 5,
-      "neighbors": 5
-    },
-    "1709": {
-      "name": "Ravenner2000",
-      "platform": "gab",
-      "degree": 22,
-      "neighbors": 22
-    },
-    "1715": {
-      "name": "RealAlexJones",
-      "platform": "gab",
-      "degree": 16,
-      "neighbors": 16
-    },
-    "1764": {
-      "name": "Rigit",
-      "platform": "gab",
-      "degree": 21,
-      "neighbors": 21
-    },
-    "1790": {
-      "name": "Rosine_cc",
-      "platform": "gab",
-      "degree": 11,
-      "neighbors": 11
-    },
-    "1818": {
-      "name": "STONEHENGEWOLF",
       "platform": "gab",
       "degree": 6,
       "neighbors": 6
     },
-    "1855": {
-      "name": "Seatrumpet",
+    "195": {
+      "name": "AuH2O",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "230": {
+      "name": "BackAtTheRanch",
+      "platform": "gab",
+      "degree": 44,
+      "neighbors": 44
+    },
+    "249": {
+      "name": "Bcoco",
+      "platform": "gab",
+      "degree": 39,
+      "neighbors": 39
+    },
+    "260": {
+      "name": "BelladonnaSue",
+      "platform": "gab",
+      "degree": 39,
+      "neighbors": 39
+    },
+    "275": {
+      "name": "Billgo",
+      "platform": "gab",
+      "degree": 11,
+      "neighbors": 11
+    },
+    "301": {
+      "name": "Boomstick",
+      "platform": "gab",
+      "degree": 44,
+      "neighbors": 44
+    },
+    "372": {
+      "name": "Carolina1974",
       "platform": "gab",
       "degree": 23,
       "neighbors": 23
     },
-    "1891": {
-      "name": "SimonVouet",
+    "373": {
+      "name": "Carolinastreet",
       "platform": "gab",
-      "degree": 16,
-      "neighbors": 16
+      "degree": 39,
+      "neighbors": 39
     },
-    "1931": {
-      "name": "StephenMckenna",
-      "platform": "fediverse",
-      "degree": 46,
-      "neighbors": 46
+    "388": {
+      "name": "Censorshipsucks",
+      "platform": "minds",
+      "degree": 88,
+      "neighbors": 88
     },
-    "1946": {
-      "name": "Stonewoodforge",
+    "458": {
+      "name": "CowGirlKat",
+      "platform": "gab",
+      "degree": 39,
+      "neighbors": 39
+    },
+    "492": {
+      "name": "Danco1830",
+      "platform": "gab",
+      "degree": 43,
+      "neighbors": 43
+    },
+    "514": {
+      "name": "David_Citizen",
+      "platform": "gab",
+      "degree": 31,
+      "neighbors": 31
+    },
+    "524": {
+      "name": "DebbyShultz",
+      "platform": "gab",
+      "degree": 44,
+      "neighbors": 44
+    },
+    "527": {
+      "name": "Deedee1487",
+      "platform": "gab",
+      "degree": 40,
+      "neighbors": 40
+    },
+    "542": {
+      "name": "DeplorableBot1",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "544": {
+      "name": "DeplorableOzy",
+      "platform": "gab",
+      "degree": 40,
+      "neighbors": 40
+    },
+    "549": {
+      "name": "Devildoc696",
+      "platform": "gab",
+      "degree": 37,
+      "neighbors": 37
+    },
+    "558": {
+      "name": "Did_I_Piss_You_Off",
+      "platform": "gab",
+      "degree": 43,
+      "neighbors": 43
+    },
+    "580": {
+      "name": "DoctorQ's Boom Box!",
+      "platform": "telegram",
+      "degree": 87,
+      "neighbors": 87
+    },
+    "595": {
+      "name": "Doomsday Preppers and Survivalist.",
+      "platform": "telegram",
+      "degree": 106,
+      "neighbors": 106
+    },
+    "663": {
+      "name": "EricSandy",
+      "platform": "gab",
+      "degree": 40,
+      "neighbors": 40
+    },
+    "682": {
+      "name": "FJB_1775",
+      "platform": "gab",
+      "degree": 40,
+      "neighbors": 40
+    },
+    "701": {
+      "name": "Fighting 4 AZ",
+      "platform": "telegram",
+      "degree": 86,
+      "neighbors": 86
+    },
+    "704": {
+      "name": "Finja2",
+      "platform": "gab",
+      "degree": 42,
+      "neighbors": 42
+    },
+    "773": {
+      "name": "GaryCCannon",
+      "platform": "gab",
+      "degree": 40,
+      "neighbors": 40
+    },
+    "778": {
+      "name": "Gateway Pundit",
+      "platform": "telegram",
+      "degree": 101,
+      "neighbors": 101
+    },
+    "782": {
+      "name": "General Fully Exposed",
+      "platform": "telegram",
+      "degree": 6,
+      "neighbors": 6
+    },
+    "833": {
+      "name": "GrizzledOldNamVet",
+      "platform": "gab",
+      "degree": 9,
+      "neighbors": 9
+    },
+    "870": {
+      "name": "HerbstDW",
+      "platform": "gab",
+      "degree": 47,
+      "neighbors": 47
+    },
+    "895": {
+      "name": "INFOWARS",
+      "platform": "gab",
+      "degree": 11,
+      "neighbors": 11
+    },
+    "896": {
+      "name": "INFOWARS.COM",
+      "platform": "telegram",
+      "degree": 33,
+      "neighbors": 33
+    },
+    "920": {
+      "name": "Infowars",
+      "platform": "minds",
+      "degree": 23,
+      "neighbors": 23
+    },
+    "963": {
+      "name": "JamesPalmer",
+      "platform": "gab",
+      "degree": 39,
+      "neighbors": 39
+    },
+    "975": {
+      "name": "Jasontroy",
+      "platform": "gab",
+      "degree": 26,
+      "neighbors": 26
+    },
+    "1008": {
+      "name": "Jlm350",
+      "platform": "gab",
+      "degree": 34,
+      "neighbors": 34
+    },
+    "1009": {
+      "name": "Jmar1967",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "1010": {
+      "name": "JoCo Integrity Intercept, Eyes on the Truth",
+      "platform": "telegram",
+      "degree": 42,
+      "neighbors": 42
+    },
+    "1011": {
+      "name": "JoJoAdjunctProfessor",
+      "platform": "minds",
+      "degree": 77,
+      "neighbors": 77
+    },
+    "1022": {
+      "name": "JohnBouchell",
+      "platform": "gab",
+      "degree": 42,
+      "neighbors": 42
+    },
+    "1052": {
+      "name": "Juleskid",
+      "platform": "gab",
+      "degree": 38,
+      "neighbors": 38
+    },
+    "1069": {
+      "name": "K0d1ack",
+      "platform": "gab",
+      "degree": 39,
+      "neighbors": 39
+    },
+    "1077": {
+      "name": "KSC",
+      "platform": "gab",
+      "degree": 37,
+      "neighbors": 37
+    },
+    "1082": {
+      "name": "Kallou22",
+      "platform": "gab",
+      "degree": 37,
+      "neighbors": 37
+    },
+    "1203": {
+      "name": "Light05",
       "platform": "gab",
       "degree": 19,
       "neighbors": 19
     },
-    "1949": {
+    "1292": {
+      "name": "MarciaW",
+      "platform": "gab",
+      "degree": 43,
+      "neighbors": 43
+    },
+    "1306": {
+      "name": "Markat12",
+      "platform": "gab",
+      "degree": 37,
+      "neighbors": 37
+    },
+    "1320": {
+      "name": "Matrixxx Grooove Show",
+      "platform": "telegram",
+      "degree": 87,
+      "neighbors": 87
+    },
+    "1336": {
+      "name": "Mdlmurray",
+      "platform": "gab",
+      "degree": 42,
+      "neighbors": 42
+    },
+    "1350": {
+      "name": "Merileedawn",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "1359": {
+      "name": "Midnight Rider Channel",
+      "platform": "telegram",
+      "degree": 71,
+      "neighbors": 71
+    },
+    "1379": {
+      "name": "Minnesota First Audit Chat",
+      "platform": "telegram",
+      "degree": 89,
+      "neighbors": 89
+    },
+    "1384": {
+      "name": "MissLiberty86",
+      "platform": "minds",
+      "degree": 48,
+      "neighbors": 48
+    },
+    "1424": {
+      "name": "Mxtrning",
+      "platform": "gab",
+      "degree": 42,
+      "neighbors": 42
+    },
+    "1427": {
+      "name": "My48",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "1443": {
+      "name": "NRR78192",
+      "platform": "gab",
+      "degree": 2,
+      "neighbors": 2
+    },
+    "1458": {
+      "name": "Nataliya",
+      "platform": "gab",
+      "degree": 3,
+      "neighbors": 3
+    },
+    "1475": {
+      "name": "New Mexico Audit Force",
+      "platform": "telegram",
+      "degree": 91,
+      "neighbors": 91
+    },
+    "1552": {
+      "name": "Owen Shroyer",
+      "platform": "telegram",
+      "degree": 27,
+      "neighbors": 27
+    },
+    "1562": {
+      "name": "PATRIOTS For AMERICA",
+      "platform": "telegram",
+      "degree": 76,
+      "neighbors": 76
+    },
+    "1579": {
+      "name": "Papa_Joe",
+      "platform": "minds",
+      "degree": 79,
+      "neighbors": 79
+    },
+    "1588": {
+      "name": "Patriot Army",
+      "platform": "telegram",
+      "degree": 100,
+      "neighbors": 100
+    },
+    "1589": {
+      "name": "Patriot Force California Channel",
+      "platform": "telegram",
+      "degree": 62,
+      "neighbors": 62
+    },
+    "1603": {
+      "name": "PatriotQueen213",
+      "platform": "gab",
+      "degree": 38,
+      "neighbors": 38
+    },
+    "1613": {
+      "name": "Patton6966",
+      "platform": "telegram",
+      "degree": 95,
+      "neighbors": 95
+    },
+    "1704": {
+      "name": "Qlobal-Change USA",
+      "platform": "telegram",
+      "degree": 8,
+      "neighbors": 8
+    },
+    "1706": {
+      "name": "Qrash the matrix",
+      "platform": "telegram",
+      "degree": 99,
+      "neighbors": 99
+    },
+    "1720": {
+      "name": "RJohnL",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "1745": {
+      "name": "Ravenner2000",
+      "platform": "gab",
+      "degree": 39,
+      "neighbors": 39
+    },
+    "1751": {
+      "name": "RealAlexJones",
+      "platform": "gab",
+      "degree": 21,
+      "neighbors": 21
+    },
+    "1800": {
+      "name": "Rigit",
+      "platform": "gab",
+      "degree": 38,
+      "neighbors": 38
+    },
+    "1822": {
+      "name": "RonsDesign",
+      "platform": "gab",
+      "degree": 34,
+      "neighbors": 34
+    },
+    "1827": {
+      "name": "Rosine_cc",
+      "platform": "gab",
+      "degree": 19,
+      "neighbors": 19
+    },
+    "1856": {
+      "name": "STONEHENGEWOLF",
+      "platform": "gab",
+      "degree": 8,
+      "neighbors": 8
+    },
+    "1893": {
+      "name": "Seatrumpet",
+      "platform": "gab",
+      "degree": 40,
+      "neighbors": 40
+    },
+    "1963": {
+      "name": "Stahove1",
+      "platform": "gab",
+      "degree": 37,
+      "neighbors": 37
+    },
+    "1970": {
+      "name": "StephenMckenna",
+      "platform": "minds",
+      "degree": 88,
+      "neighbors": 88
+    },
+    "1986": {
+      "name": "Stonewoodforge",
+      "platform": "gab",
+      "degree": 37,
+      "neighbors": 37
+    },
+    "1989": {
       "name": "Stuart28",
       "platform": "gab",
-      "degree": 22,
-      "neighbors": 22
+      "degree": 40,
+      "neighbors": 40
     },
-    "1960": {
+    "2000": {
       "name": "Suthrnmsguy",
       "platform": "gab",
-      "degree": 25,
-      "neighbors": 25
+      "degree": 42,
+      "neighbors": 42
     },
-    "1977": {
+    "2017": {
       "name": "THE SANDMAN PROJECT",
       "platform": "telegram",
       "degree": 9,
       "neighbors": 9
     },
-    "1990": {
-      "name": "Tannadycestrathmore",
-      "platform": "gab",
-      "degree": 13,
-      "neighbors": 13
-    },
-    "2001": {
+    "2042": {
       "name": "Telosa3",
       "platform": "gab",
-      "degree": 24,
-      "neighbors": 24
+      "degree": 42,
+      "neighbors": 42
     },
-    "2033": {
+    "2075": {
       "name": "The Infamous Legend Valley Proud Boys",
       "platform": "telegram",
-      "degree": 15,
-      "neighbors": 15
+      "degree": 12,
+      "neighbors": 12
     },
-    "2057": {
+    "2099": {
       "name": "TheAlexJonesChannel",
-      "platform": "fediverse",
-      "degree": 30,
-      "neighbors": 30
+      "platform": "minds",
+      "degree": 32,
+      "neighbors": 32
     },
-    "2058": {
+    "2100": {
       "name": "TheAmericanJournal",
       "platform": "gab",
-      "degree": 9,
-      "neighbors": 9
+      "degree": 11,
+      "neighbors": 11
     },
-    "2063": {
+    "2105": {
       "name": "TheBloodyRedQueen",
       "platform": "gab",
-      "degree": 9,
-      "neighbors": 9
+      "degree": 11,
+      "neighbors": 11
     },
-    "2094": {
-      "name": "The_Real_Lonewolf",
-      "platform": "gab",
-      "degree": 9,
-      "neighbors": 9
-    },
-    "2095": {
+    "2138": {
       "name": "The_Trump_News_Network",
-      "platform": "fediverse",
-      "degree": 49,
-      "neighbors": 49
+      "platform": "minds",
+      "degree": 89,
+      "neighbors": 89
     },
-    "2101": {
-      "name": "Therealrussellcoight",
-      "platform": "gab",
-      "degree": 10,
-      "neighbors": 10
-    },
-    "2114": {
+    "2158": {
       "name": "Thringen steht auf! (ffentlicher Talk)",
       "platform": "telegram",
-      "degree": 8,
-      "neighbors": 8
+      "degree": 6,
+      "neighbors": 6
     },
-    "2119": {
+    "2163": {
       "name": "Tm2roll",
       "platform": "gab",
-      "degree": 26,
-      "neighbors": 26
+      "degree": 43,
+      "neighbors": 43
     },
-    "2125": {
-      "name": "Tokaise",
+    "2188": {
+      "name": "TranNhuNhong",
+      "platform": "minds",
+      "degree": 86,
+      "neighbors": 86
+    },
+    "2233": {
+      "name": "URNGURN",
+      "platform": "minds",
+      "degree": 89,
+      "neighbors": 89
+    },
+    "2238": {
+      "name": "USAGIRL",
       "platform": "gab",
-      "degree": 16,
-      "neighbors": 16
+      "degree": 37,
+      "neighbors": 37
     },
-    "2169": {
-      "name": "TruthHammer  (any DM's you get are fake)",
-      "platform": "telegram",
-      "degree": 24,
-      "neighbors": 24
+    "2246": {
+      "name": "Unacceptable",
+      "platform": "minds",
+      "degree": 100,
+      "neighbors": 100
     },
-    "2172": {
-      "name": "Truthseeker___QQ7",
-      "platform": "gab",
-      "degree": 14,
-      "neighbors": 14
-    },
-    "2175": {
-      "name": "Truthteller1349",
-      "platform": "gab",
-      "degree": 25,
-      "neighbors": 25
-    },
-    "2203": {
+    "2251": {
       "name": "Undergroundnotes",
       "platform": "gab",
-      "degree": 21,
-      "neighbors": 21
+      "degree": 39,
+      "neighbors": 39
     },
-    "2261": {
+    "2309": {
       "name": "WarRoomShow",
-      "platform": "gab",
-      "degree": 16,
-      "neighbors": 16
+      "platform": "minds",
+      "degree": 28,
+      "neighbors": 28
     },
-    "2288": {
-      "name": "Wharfrat52",
-      "platform": "gab",
-      "degree": 17,
-      "neighbors": 17
-    },
-    "2290": {
+    "2339": {
       "name": "WhiteIsTheFury",
       "platform": "gab",
       "degree": 2,
       "neighbors": 2
     },
-    "2303": {
+    "2352": {
       "name": "Wisconsin Election Integrity",
       "platform": "telegram",
-      "degree": 47,
-      "neighbors": 47
+      "degree": 70,
+      "neighbors": 70
     },
-    "2307": {
+    "2356": {
       "name": "WittieKittie",
-      "platform": "gab",
-      "degree": 8,
-      "neighbors": 8
-    },
-    "2309": {
-      "name": "Woke Rodeo Chat",
-      "platform": "telegram",
-      "degree": 12,
-      "neighbors": 12
-    },
-    "2328": {
-      "name": "Yaffa88",
-      "platform": "gab",
-      "degree": 20,
-      "neighbors": 20
-    },
-    "2392": {
-      "name": "alexjoneslive",
-      "platform": "vk",
-      "degree": 26,
-      "neighbors": 26
-    },
-    "2402": {
-      "name": "alternate_distance_reiki",
       "platform": "gab",
       "degree": 5,
       "neighbors": 5
     },
-    "2420": {
-      "name": "annemason",
-      "platform": "gab",
-      "degree": 22,
-      "neighbors": 22
+    "2358": {
+      "name": "Woke Rodeo Chat",
+      "platform": "telegram",
+      "degree": 23,
+      "neighbors": 23
     },
-    "2538": {
-      "name": "brendonusa",
+    "2378": {
+      "name": "Yaffa88",
       "platform": "gab",
-      "degree": 16,
-      "neighbors": 16
+      "degree": 39,
+      "neighbors": 39
     },
-    "2577": {
-      "name": "cavedawg",
-      "platform": "gab",
-      "degree": 24,
-      "neighbors": 24
+    "2384": {
+      "name": "Yotivationnation",
+      "platform": "minds",
+      "degree": 88,
+      "neighbors": 88
     },
-    "2703": {
-      "name": "davidbatteau",
-      "platform": "gab",
-      "degree": 4,
-      "neighbors": 4
-    },
-    "2793": {
-      "name": "egwhitney",
-      "platform": "gab",
+    "2432": {
+      "name": "againstcensorship",
+      "platform": "minds",
       "degree": 3,
       "neighbors": 3
     },
-    "2806": {
-      "name": "emctsprime",
-      "platform": "gab",
-      "degree": 15,
-      "neighbors": 15
-    },
-    "2874": {
-      "name": "gatewaypundit",
-      "platform": "gab",
+    "2445": {
+      "name": "alexjoneslive",
+      "platform": "vk",
       "degree": 27,
       "neighbors": 27
     },
-    "2875": {
-      "name": "gatewaypundit_official",
-      "platform": "fediverse",
-      "degree": 65,
-      "neighbors": 65
-    },
-    "2943": {
-      "name": "herbpigott",
-      "platform": "fediverse",
-      "degree": 56,
-      "neighbors": 56
-    },
-    "2971": {
-      "name": "hummyb",
+    "2455": {
+      "name": "alternate_distance_reiki",
       "platform": "gab",
-      "degree": 28,
-      "neighbors": 28
+      "degree": 7,
+      "neighbors": 7
     },
-    "3031": {
-      "name": "id527173656",
-      "platform": "vk",
-      "degree": 11,
-      "neighbors": 11
+    "2473": {
+      "name": "annemason",
+      "platform": "gab",
+      "degree": 42,
+      "neighbors": 42
     },
-    "3101": {
-      "name": "id635212209",
-      "platform": "vk",
-      "degree": 64,
-      "neighbors": 64
+    "2522": {
+      "name": "badland66",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
     },
-    "3102": {
-      "name": "id635774495",
-      "platform": "vk",
-      "degree": 6,
-      "neighbors": 6
+    "2556": {
+      "name": "bigace0001",
+      "platform": "minds",
+      "degree": 90,
+      "neighbors": 90
     },
-    "3115": {
-      "name": "id658477212",
-      "platform": "vk",
-      "degree": 3,
-      "neighbors": 3
+    "2581": {
+      "name": "bobfurapples",
+      "platform": "minds",
+      "degree": 77,
+      "neighbors": 77
     },
-    "3145": {
-      "name": "id712495272",
-      "platform": "vk",
-      "degree": 11,
-      "neighbors": 11
+    "2589": {
+      "name": "borepstein",
+      "platform": "minds",
+      "degree": 87,
+      "neighbors": 87
     },
-    "3287": {
-      "name": "jrhager",
+    "2606": {
+      "name": "brilast",
+      "platform": "minds",
+      "degree": 80,
+      "neighbors": 80
+    },
+    "2646": {
+      "name": "cavedawg",
+      "platform": "gab",
+      "degree": 43,
+      "neighbors": 43
+    },
+    "2730": {
+      "name": "counter_culture_warrior",
+      "platform": "minds",
+      "degree": 82,
+      "neighbors": 82
+    },
+    "2740": {
+      "name": "csEval",
+      "platform": "gab",
+      "degree": 30,
+      "neighbors": 30
+    },
+    "2778": {
+      "name": "davidbatteau",
       "platform": "gab",
       "degree": 8,
       "neighbors": 8
     },
-    "3339": {
-      "name": "kittyboy15",
-      "platform": "fediverse",
-      "degree": 40,
-      "neighbors": 40
+    "2779": {
+      "name": "davidcitizen",
+      "platform": "minds",
+      "degree": 90,
+      "neighbors": 90
     },
-    "3344": {
-      "name": "knightsstrength",
+    "2841": {
+      "name": "dougmccomb",
+      "platform": "minds",
+      "degree": 88,
+      "neighbors": 88
+    },
+    "2890": {
+      "name": "emctsprime",
       "platform": "gab",
-      "degree": 6,
-      "neighbors": 6
+      "degree": 18,
+      "neighbors": 18
     },
-    "3468": {
-      "name": "mboyer2021",
+    "2897": {
+      "name": "ensitue",
+      "platform": "gab",
+      "degree": 39,
+      "neighbors": 39
+    },
+    "2961": {
+      "name": "gatewaypundit",
+      "platform": "gab",
+      "degree": 43,
+      "neighbors": 43
+    },
+    "2962": {
+      "name": "gatewaypundit_official",
+      "platform": "minds",
+      "degree": 97,
+      "neighbors": 97
+    },
+    "2994": {
+      "name": "graymaze",
+      "platform": "gab",
+      "degree": 36,
+      "neighbors": 36
+    },
+    "3033": {
+      "name": "herbpigott",
+      "platform": "minds",
+      "degree": 95,
+      "neighbors": 95
+    },
+    "3061": {
+      "name": "hummyb",
+      "platform": "gab",
+      "degree": 44,
+      "neighbors": 44
+    },
+    "3071": {
+      "name": "icare4america@freeatlantis.com",
+      "platform": "minds",
+      "degree": 96,
+      "neighbors": 96
+    },
+    "3193": {
+      "name": "id635212209",
       "platform": "vk",
-      "degree": 6,
-      "neighbors": 6
+      "degree": 102,
+      "neighbors": 102
     },
-    "3488": {
+    "3444": {
+      "name": "kittyboy15",
+      "platform": "minds",
+      "degree": 95,
+      "neighbors": 95
+    },
+    "3449": {
+      "name": "knightsstrength",
+      "platform": "minds",
+      "degree": 22,
+      "neighbors": 22
+    },
+    "3527": {
+      "name": "madel_schmadel",
+      "platform": "minds",
+      "degree": 78,
+      "neighbors": 78
+    },
+    "3535": {
+      "name": "majo1776maga",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "3602": {
+      "name": "mfirebrand2",
+      "platform": "gab",
+      "degree": 41,
+      "neighbors": 41
+    },
+    "3603": {
       "name": "mgauthier64",
       "platform": "vk",
       "degree": 7,
       "neighbors": 7
     },
-    "3496": {
+    "3612": {
       "name": "michaelbassett17",
       "platform": "gab",
-      "degree": 24,
-      "neighbors": 24
+      "degree": 43,
+      "neighbors": 43
     },
-    "3512": {
+    "3629": {
       "name": "mlw975",
       "platform": "gab",
-      "degree": 7,
-      "neighbors": 7
+      "degree": 12,
+      "neighbors": 12
     },
-    "3554": {
+    "3672": {
       "name": "navycorpsman6969",
-      "platform": "fediverse",
-      "degree": 70,
-      "neighbors": 70
+      "platform": "minds",
+      "degree": 95,
+      "neighbors": 95
     },
-    "3643": {
-      "name": "patriootti1964",
-      "platform": "vk",
-      "degree": 9,
-      "neighbors": 9
+    "3785": {
+      "name": "petzanpz",
+      "platform": "gab",
+      "degree": 40,
+      "neighbors": 40
     },
-    "3733": {
+    "3858": {
       "name": "randomest",
       "platform": "gab",
-      "degree": 19,
-      "neighbors": 19
+      "degree": 33,
+      "neighbors": 33
     },
-    "3792": {
-      "name": "roger_penrose",
+    "3982": {
+      "name": "sentinal",
       "platform": "gab",
-      "degree": 2,
-      "neighbors": 2
+      "degree": 38,
+      "neighbors": 38
     },
-    "3866": {
+    "4002": {
       "name": "shortman5427",
       "platform": "gab",
-      "degree": 23,
-      "neighbors": 23
+      "degree": 40,
+      "neighbors": 40
     },
-    "3908": {
+    "4006": {
+      "name": "shylohg",
+      "platform": "gab",
+      "degree": 38,
+      "neighbors": 38
+    },
+    "4047": {
       "name": "starknightz",
       "platform": "gab",
-      "degree": 22,
-      "neighbors": 22
+      "degree": 33,
+      "neighbors": 33
     },
-    "3936": {
-      "name": "sylvainpalau",
-      "platform": "gab",
-      "degree": 17,
-      "neighbors": 17
+    "4101": {
+      "name": "texan2",
+      "platform": "minds",
+      "degree": 77,
+      "neighbors": 77
     },
-    "3964": {
+    "4106": {
       "name": "theamericanjournal",
-      "platform": "fediverse",
-      "degree": 16,
-      "neighbors": 16
+      "platform": "minds",
+      "degree": 20,
+      "neighbors": 20
     },
-    "4016": {
+    "4163": {
       "name": "tncobia691",
       "platform": "gab",
-      "degree": 22,
-      "neighbors": 22
+      "degree": 40,
+      "neighbors": 40
     },
-    "4137": {
+    "4248": {
+      "name": "waltemyer",
+      "platform": "gab",
+      "degree": 43,
+      "neighbors": 43
+    },
+    "4277": {
+      "name": "wiscojaydub",
+      "platform": "minds",
+      "degree": 90,
+      "neighbors": 90
+    },
+    "4284": {
+      "name": "wnomad1",
+      "platform": "minds",
+      "degree": 5,
+      "neighbors": 5
+    },
+    "4297": {
       "name": "wushukid",
       "platform": "gab",
-      "degree": 24,
-      "neighbors": 24
+      "degree": 42,
+      "neighbors": 42
     },
-    "4295": {
+    "4458": {
       "name": "Waking Up with Walt",
       "platform": "telegram",
       "degree": 2,
@@ -847,9 +967,9 @@
     }
   },
   "platform_statistics": {
-    "gab": 90,
-    "telegram": 30,
-    "vk": 10,
-    "fediverse": 9
+    "minds": 32,
+    "gab": 96,
+    "telegram": 27,
+    "vk": 4
   }
 }

@@ -8,7 +8,7 @@ from custom_types.Platform import Platform
 
 def load_dataframes() -> pd.DataFrame:
     total_df = pd.DataFrame()
-    for platform in [Platform.FEDIVERSE, Platform.GAB, Platform.TELEGRAM, Platform.VK]:
+    for platform in [Platform.FEDIVERSE, Platform.GAB, Platform.TELEGRAM, Platform.VK, Platform.MINDS]:
         platform_df = pd.read_csv(f"../datasets/{platform}/filtered_posts_cleaned.csv")
         total_df = pd.concat([total_df, platform_df])
 

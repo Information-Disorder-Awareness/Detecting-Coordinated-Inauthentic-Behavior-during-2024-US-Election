@@ -15,19 +15,19 @@ from scripts.plot_domains import plot_domain_counts
 
 
 def main(platform: Platform) -> None:
-    #gather_data(platform)
-    #unspool_texts(platform)
-    #process_urls(platform)
-    #process_urls_stats(platform)
-    #filter_relevant_urls(platform)
-    #filter_active_users(platform)
-    #clean_dataset(platform)
-    #analyze_url_similarity_network(platform)
-    #calculate_thresholds(platform)
-    #create_network_visualization(platform)
-    #get_coordinators_domains(platform)
+    gather_data(platform)
+    unspool_texts(platform)
+    process_urls(platform)
+    process_urls_stats(platform)
+    filter_relevant_urls(platform)
+    filter_active_users(platform)
+    clean_dataset(platform)
+    analyze_url_similarity_network(platform)
+    calculate_thresholds(platform)
+    create_network_visualization(platform)
+    get_coordinators_domains(platform)
     plot_domain_counts(platform)
 
 
 if __name__ == '__main__':
-    main(Platform.VK)
+    main(Platform.MINDS)

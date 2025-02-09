@@ -7,9 +7,9 @@ from scripts.plot_domains import plot_domain_counts
 def main() -> None:
     #analyze_url_similarity_network()
     #calculate_thresholds()
-    #create_network_visualization()
+    create_network_visualization()
     #get_coordinators_domains()
-    plot_domain_counts()
+    #plot_domain_counts()
 
 
 if __name__ == '__main__':

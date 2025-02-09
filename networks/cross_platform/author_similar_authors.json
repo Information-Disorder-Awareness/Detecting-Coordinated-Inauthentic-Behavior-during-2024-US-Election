@@ -1,9 +1,27 @@
 [
   {
-    "author1": "INFOWARS.COM \ud83d\udeab\ud83d\udeab\ud83d\udeab",
-    "author2": "TheAlexJonesChannel",
+    "author1": "Owen Shroyer \ud83c\uddfa\ud83c\uddf8",
+    "author2": "WarRoomShow",
     "platform1": "telegram",
-    "platform2": "fediverse"
+    "platform2": "minds"
+  },
+  {
+    "author1": "NTD",
+    "author2": "The Epoch Times",
+    "platform1": "minds",
+    "platform2": "telegram"
+  },
+  {
+    "author1": "NTD",
+    "author2": "NTD Chat",
+    "platform1": "minds",
+    "platform2": "telegram"
+  },
+  {
+    "author1": "INFOWARS.COM \ud83d\udeab\ud83d\udeab\ud83d\udeab",
+    "author2": "WarRoomShow",
+    "platform1": "telegram",
+    "platform2": "minds"
   },
   {
     "author1": "INFOWARS.COM \ud83d\udeab\ud83d\udeab\ud83d\udeab",
@@ -12,21 +30,33 @@
     "platform2": "gab"
   },
   {
+    "author1": "NTD",
+    "author2": "The Epoch Times Chat",
+    "platform1": "minds",
+    "platform2": "telegram"
+  },
+  {
     "author1": "RealAlexJones",
     "author2": "TheAlexJonesChannel",
     "platform1": "gab",
-    "platform2": "fediverse"
+    "platform2": "minds"
+  },
+  {
+    "author1": "GrumpyRabbit",
+    "author2": "strategesis",
+    "platform1": "fediverse",
+    "platform2": "minds"
+  },
+  {
+    "author1": "GrumpyRabbit",
+    "author2": "grumpyrabbit@social.teci.world",
+    "platform1": "fediverse",
+    "platform2": "minds"
   },
   {
     "author1": "INFOWARS.COM \ud83d\udeab\ud83d\udeab\ud83d\udeab",
-    "author2": "WarRoomShow",
+    "author2": "TheAlexJonesChannel",
     "platform1": "telegram",
-    "platform2": "gab"
-  },
-  {
-    "author1": "Owen Shroyer \ud83c\uddfa\ud83c\uddf8",
-    "author2": "WarRoomShow",
-    "platform1": "telegram",
-    "platform2": "gab"
+    "platform2": "minds"
   }
 ]

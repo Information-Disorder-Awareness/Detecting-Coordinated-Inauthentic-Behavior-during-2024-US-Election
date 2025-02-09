@@ -1,0 +1,35 @@
+{
+  "network_statistics": {
+    "number_of_nodes": 4,
+    "number_of_edges": 6,
+    "average_degree": 3.0,
+    "density": 1.0,
+    "number_of_connected_components": 1
+  },
+  "threshold_parameters": {
+    "similarity_percentile": 94,
+    "centrality_percentile": 98
+  },
+  "authors": {
+    "69": {
+      "name": "Unacceptable",
+      "degree": 3,
+      "neighbors": 3
+    },
+    "120": {
+      "name": "gatewaypundit_official",
+      "degree": 3,
+      "neighbors": 3
+    },
+    "125": {
+      "name": "herbpigott",
+      "degree": 3,
+      "neighbors": 3
+    },
+    "160": {
+      "name": "navycorpsman6969",
+      "degree": 3,
+      "neighbors": 3
+    }
+  }
+}
