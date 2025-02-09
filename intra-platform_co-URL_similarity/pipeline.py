@@ -13,7 +13,7 @@ from scripts.network_visualizer import create_network_visualization
 
 
 def main(platform: Platform) -> None:
-    #gather_data(platform)
+    gather_data(platform)
     unspool_texts(platform)
     process_urls(platform)
     process_urls_stats(platform)
