@@ -6,11 +6,11 @@ import os
 import json
 import re
 import logging
+import seaborn as sns
 
 # Configure logging
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 def clean_label(text):
     """Clean label text by removing emojis and problematic Unicode characters"""
@@ -27,7 +27,6 @@ def clean_label(text):
     cleaned_text = ''.join(c for c in cleaned_text if c.isascii() or c.isspace())
     return cleaned_text.strip()
 
-
 def load_similarity_matrix(file_path: str) -> np.ndarray:
     """Load and process similarity matrix from file."""
     logging.info(f"Loading similarity matrix from {file_path}")
@@ -37,7 +36,6 @@ def load_similarity_matrix(file_path: str) -> np.ndarray:
     matrix = np.round(matrix, decimals=2)
     logging.info(f"Loaded matrix with shape {matrix.shape}")
     return matrix
-
 
 def load_author_mappings(platform: str) -> dict:
     """Load author mappings from the JSON file"""
@@ -54,14 +52,14 @@ def load_author_mappings(platform: str) -> dict:
         logging.warning(f"Author mappings not found at {mapping_path}")
         return {}
 
-
-def visualize_network(G: nx.Graph, author_labels: dict, output_file: str, title: str):
-    """Create and save network visualization."""
+def visualize_network(G: nx.Graph, author_labels: dict, output_file: str, title: str, offset_y: float = -0.05):
+    """Create and save network visualization with updated styling."""
     logging.info(f"Creating network visualization: {title}")
     logging.info(f"Network size: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
-    plt.figure(figsize=(20, 20))
-    plt.rcParams['font.family'] = ['Arial', 'sans-serif']
+    # Set up the figure with new styling
+    plt.figure(figsize=(18, 12))
+    sns.set_style("white")
 
     # Process edge weights
     edge_weights = nx.get_edge_attributes(G, 'weight')
@@ -78,49 +76,40 @@ def visualize_network(G: nx.Graph, author_labels: dict, output_file: str, title:
     logging.info("Calculating network layout")
     pos = nx.spring_layout(
         G,
-        k=1.5 / np.sqrt(G.number_of_nodes()),
+        k=1.0,
         iterations=100,
         weight='weight',
         seed=42
     )
 
-    # Process edges
-    edges = G.edges()
-    edge_weights_list = [G[u][v]['weight'] for (u, v) in edges]
-    if edge_weights_list:
-        max_weight = max(edge_weights_list)
-        min_weight = min(edge_weights_list)
-        edge_widths = [1 + 3 * (w - min_weight) / (max_weight - min_weight) for w in edge_weights_list]
-    else:
-        edge_widths = [1]
+    # Draw nodes with updated styling
+    nx.draw_networkx_nodes(G, pos,
+                          node_color='red',
+                          alpha=0.85,
+                          node_size=80,
+                          edgecolors='black')
 
-    # Draw nodes
-    logging.info("Drawing network elements")
-    node_sizes = [d * 10 for (node, d) in G.degree()]
-    nx.draw_networkx_nodes(G, pos, node_size=node_sizes,
-                           node_color='lightblue', alpha=0.6)
-
-    # Draw edges
+    # Draw edges with updated styling
     nx.draw_networkx_edges(G, pos,
-                           width=edge_widths,
-                           edge_color=edge_weights_list,
-                           edge_cmap=plt.cm.Blues,
-                           alpha=0.5)
+                          alpha=0.7,
+                          edge_color='gray',
+                          width=0.8)
 
-    # Process labels
+    # Process labels with offset
     labels = {node: clean_label(author_labels.get(node, str(node))) for node in G.nodes()}
-    pos_attrs = {}
-    for node, coords in pos.items():
-        pos_attrs[node] = (coords[0], coords[1] + 0.02)
+    pos_labels = {node: (x, y + offset_y) for node, (x, y) in pos.items()}
 
-    # Draw labels
-    nx.draw_networkx_labels(G, pos_attrs, labels,
-                            font_size=12,
-                            font_weight='bold',
-                            bbox=dict(facecolor='white',
-                                      edgecolor='none',
-                                      alpha=0.7,
-                                      pad=0.5))
+    # Draw labels with updated styling
+    nx.draw_networkx_labels(G, pos_labels,
+                           labels,
+                           font_size=9,
+                           font_color='black',
+                           verticalalignment='center',
+                           horizontalalignment='center',
+                           bbox=dict(facecolor='white',
+                                   edgecolor='none',
+                                   alpha=0.7,
+                                   pad=0.5))
 
     plt.title(title)
     plt.axis('off')
@@ -130,7 +119,6 @@ def visualize_network(G: nx.Graph, author_labels: dict, output_file: str, title:
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
     logging.info("Visualization completed")
-
 
 def save_network_info(G: nx.Graph, author_labels: dict, platform: str, thresholds: dict, output_dir: str):
     """Save network information and author list to a file"""
@@ -167,13 +155,11 @@ def save_network_info(G: nx.Graph, author_labels: dict, platform: str, threshold
     logging.info("Network information saved successfully")
     return network_info
 
-
 def create_network_visualization(platform: str):
     """Create and save the network visualization and analysis."""
     logging.info(f"\n{'=' * 50}")
     logging.info(f"Starting network visualization for platform: {platform}")
 
-    # Load data
     try:
         similarity_matrix = load_similarity_matrix(f"../networks/{platform}/author_similarity_matrix.npz")
         author_labels = load_author_mappings(platform)
@@ -235,7 +221,7 @@ def create_network_visualization(platform: str):
 
     logging.info(f"Filtered graph has {G_filtered.number_of_nodes()} nodes and {G_filtered.number_of_edges()} edges")
 
-    # Create visualization
+    # Create visualization with updated styling
     visualize_network(
         G_filtered,
         author_labels,
