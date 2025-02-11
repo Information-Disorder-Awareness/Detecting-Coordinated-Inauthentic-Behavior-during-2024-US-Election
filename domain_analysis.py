@@ -93,32 +93,35 @@ def create_comparison_plot(platform, comparison_df):
 
 def create_percentage_plot(platform, comparison_df):
     """
-    Create and save a visualization of domains with highest percentage in filtered content
+    Create and save a visualization of the top 5 domains by percentage (minimum 10 occurrences)
     """
-    # Set minimum occurrences based on platform
+    # Filter domains with at least 10 occurrences
     min_occurrences = 100 if platform == 'cross_platform' else 10
+    filtered_domains = comparison_df[comparison_df['pre_filter'] >= min_occurrences].copy()
 
-    # Filter by minimum occurrences and calculate percentages
-    filtered_by_min = comparison_df[comparison_df['pre_filter'] >= min_occurrences].copy()
-    filtered_by_min['percentage'] = (filtered_by_min['post_filter'] / filtered_by_min['pre_filter'] * 100).round(2)
+    # Calculate percentages for filtered domains
+    filtered_domains['percentage'] = (filtered_domains['post_filter'] / filtered_domains['pre_filter'] * 100).round(2)
 
-    # Get domains with ≥30% in filtered content
-    top_domains = filtered_by_min[filtered_by_min['percentage'] >= 30].sort_values('percentage', ascending=True)
+    # Get top 5 domains by percentage
+    top_domains = filtered_domains.nlargest(5, 'percentage')
+
+    # Sort by percentage from highest to lowest
+    top_domains = top_domains.sort_values('percentage',
+                                          ascending=True)  # ascending=True because we plot from bottom to top
 
     if len(top_domains) == 0:
-        print("Nessun dominio trovato con percentuale ≥30%")
+        print("No domains found meeting the minimum occurrence threshold")
         return
 
     # Create the plot
-    plt.figure(figsize=(12, max(8, len(top_domains) * 0.3)))  # Dynamic height based on number of domains
+    plt.figure(figsize=(12, 6))  # Fixed size for 5 domains
 
     # Create horizontal bar chart
     bars = plt.barh(range(len(top_domains)), top_domains['percentage'], color='lightcoral')
 
     # Customize the plot
-    plt.title(
-        f'Domini con Maggiore Presenza nei Contenuti Filtrati (≥30%)\n(domini con almeno {min_occurrences} occorrenze totali)')
-    plt.xlabel('Percentuale nei contenuti filtrati')
+    plt.title(f'Top 5 Domains by Percentage in Filtered Content\n(minimum {min_occurrences} occurrences)')
+    plt.xlabel('Percentage in filtered content')
 
     # Add domain names on y-axis
     plt.yticks(range(len(top_domains)), top_domains.index)
@@ -138,9 +141,10 @@ def create_percentage_plot(platform, comparison_df):
                 bbox_inches='tight')
     plt.close()
 
-    # Print statistics about these domains
-    print(f"\nDomini con percentuale ≥30% nei contenuti filtrati: {len(top_domains)}")
-    print(f"Range percentuali: {top_domains['percentage'].min():.1f}% - {top_domains['percentage'].max():.1f}%")
+    # Print statistics about these domains (in descending order)
+    print(f"\nTop 5 domains by percentage (minimum {min_occurrences} occurrences):")
+    for domain, row in top_domains[::-1].iterrows():  # Reverse order for printing
+        print(f"{domain}: {row['percentage']:.1f}% ({int(row['post_filter'])}/{int(row['pre_filter'])} occurrences)")
 
 
 def analyze_domains(platform):
@@ -173,14 +177,14 @@ def analyze_domains(platform):
     # Print statistics
     total_posts_pre = comparison['pre_filter'].sum()
     total_posts_post = comparison['post_filter'].sum()
-    print(f"\nStatistiche generali:")
-    print(f"- Totale link pre-filtering: {total_posts_pre:,.0f}")
-    print(f"- Totale link post-filtering: {total_posts_post:,.0f}")
-    print(f"- Percentuale di link dai autori filtrati: {(total_posts_post / total_posts_pre * 100):.2f}%")
-    print(f"\nFile generati:")
-    print(f"- Confronto volumi: './networks/{platform}/output/domain_comparison_plot.png'")
-    print(f"- Analisi percentuali: './networks/{platform}/output/top_percentage_domains.png'")
+    print(f"\nGeneral statistics:")
+    print(f"- Total links pre-filtering: {total_posts_pre:,.0f}")
+    print(f"- Total links post-filtering: {total_posts_post:,.0f}")
+    print(f"- Percentage of links from filtered authors: {(total_posts_post / total_posts_pre * 100):.2f}%")
+    print(f"\nGenerated files:")
+    print(f"- Volume comparison: './networks/{platform}/output/domain_comparison_plot.png'")
+    print(f"- Percentage analysis: './networks/{platform}/output/top_percentage_domains.png'")
 
 
 if __name__ == "__main__":
-    analyze_domains(Platform.VK)
+    analyze_domains('cross_platform')
